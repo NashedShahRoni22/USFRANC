@@ -1,0 +1,48 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+:root {
+  --background: #E0F7FA;
+  --foreground: #333333;
+  --card: #161F26;
+  --accent: #FFD700;
+  --accent-light: #E5C974;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C3CBD2;
+  --border: #1F2A33;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0E161B;
+    --foreground: #FFFFFF;
+  }
+} */
+
+@theme{
+  --color-primary: #E0F7FA;
+  --color-logo: #7B5E00;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+}
+.goog-te-gadget {
+  color: transparent !important;
+}
+/* Change the text color */
+select.goog-te-combo {
+  color: #000 !important;
+  border: 1px solid #7B5E00;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Remove the outline on focus */
+select.goog-te-combo:focus {
+  outline: none;
+  border: 1px solid #7B5E00;
+}
+#google_translate_element a {
+  display: none !important;
+}
