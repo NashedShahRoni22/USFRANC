@@ -1,5 +1,4 @@
 @import "tailwindcss";
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 :root {
   --background: #E0F7FA;
@@ -11,13 +10,6 @@
   --text-secondary: #C3CBD2;
   --border: #1F2A33;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0E161B;
-    --foreground: #FFFFFF;
-  }
-} */
 
 @theme{
   --color-primary: #E0F7FA;

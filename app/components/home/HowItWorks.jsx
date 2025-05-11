@@ -10,21 +10,32 @@ export default function HowItWorks() {
     {
       title: "Buyer Confidence",
       icon: <FaUserTie />,
+      list: [
+        "Payments are securely held in escrow until delivery is confirmed.",
+        "Buyers are protected with a 7-day return window before final fund release.",
+      ],
     },
     {
-      title: "Funds Held in Contract",
+      title: "Merchant Reliability",
       icon: <RiRefund2Fill />,
+      list: [
+        "Merchants agree to hold payments in their USF wallet until delivery is fulfilled.",
+        "This builds trust and enhances their reputation for future transactions.",
+      ],
     },
     {
-      title: "Merchant Receives After Delivery",
+      title: "Mutual Trust for Repeat Business",
       icon: <FaStore />,
+      list: [
+        "System encourages ongoing buyer-merchant relationships through transparency and reliability.",
+      ],
     },
   ];
   return (
     <Container>
       <div className="py-8 md:py-16">
         <h5 className="font-semibold text-3xl md:text-4xl text-center">
-          How USF Works?
+          How USF secures your purchase payments?
         </h5>
 
         <div className="mt-8 md:mt-16">
@@ -37,6 +48,11 @@ export default function HowItWorks() {
                   <h3 className="text-xl font-semibold text-center">
                     {item.title}
                   </h3>
+                  <ul className="list-disc list-inside">
+                    {item.list.map((l, index) => (
+                      <li key={index}>{l}</li>
+                    ))}
+                  </ul>
                 </div>
                 {index < data.length - 1 && (
                   <div className="text-logo text-3xl">
@@ -51,15 +67,13 @@ export default function HowItWorks() {
           <div className="md:w-1/2 lg:1/4 md:mx-auto mt-8 md:mt-16">
             <div className="border border-logo rounded-2xl p-6 bg-white shadow-lg">
               <h5 className="font-semibold text-2xl md:text-3xl mb-4">
-                Crypto Coin Snapshot
+                USF Transection Fees:
               </h5>
               <ul className="list-disc space-y-2 ml-5 text-xl">
-                <li>Crypto Coin price: €2.00 at launch</li>
-                <li>Max Supply: 115 million (released in 10M phases)</li>
+                <li>A 2% admin fee is applied to peer-to-peer transactions.</li>
                 <li>
-                  Consensus: Hybrid Proof of Work + Proof of Stake and capital
-                  hedge policy 67% of First sales retained in USF government
-                  bond Investments
+                  Collected fees are allocated to operational reserves and
+                  long-term hedge capital
                 </li>
               </ul>
             </div>

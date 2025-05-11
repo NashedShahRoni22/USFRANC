@@ -31,6 +31,10 @@ export const MenuItems = [
         path: "/compliance",
       },
       {
+        title: "Aml Compliance",
+        path: "/aml-compliance",
+      },
+      {
         title: "Privacy Policy",
         path: "/privacy-policy",
       },

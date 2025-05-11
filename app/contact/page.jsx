@@ -384,6 +384,33 @@ const page = () => {
           ></iframe>
         </div>
       </div>
+
+      <div className="mb-16">
+        <p>
+          <strong>USFRANC LTD</strong> (Reg N° 10325829)
+        </p>
+        <p>
+          <strong>Correspondence Address:</strong>
+          <br />
+          4th Floor, Silverstream House,
+          <br />
+          45 Fitzroy Street, London,
+          <br />
+          England, W1T 6EB, UK
+        </p>
+        <p>
+          <strong>USFRANC LTD (French Hybrid Office)</strong>
+          <br />
+          Compliance & Network Management
+          <br />8 Rue Dublin, 34200 Sète, France
+        </p>
+        <p>
+          <strong>SAS Affin</strong> (Reg N° 803965227, RCS Montpellier)
+          <br />
+          (Appointed USFranc Reserve Management Entity Manager)
+          <br />8 Rue Dublin, 34200 Sète, France
+        </p>
+      </div>
     </Container>
   );
 };

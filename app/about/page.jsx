@@ -44,6 +44,52 @@ const sections = [
       "Proof of Stake (PoS): Enables governance and energy-efficient participation",
     ],
   },
+  {
+    title: "Crypto Coin Snapshot",
+    list: [
+      "Crypto Coin price: €2.00 at launch",
+      "Max Supply: 115 million (released in 10M phases)",
+      "Consensus: Hybrid Proof of Work + Proof of Stake and capital hedge policy 67% of First sales retained in USF government bond Investments",
+    ],
+  },
+];
+
+const usfAdvantages = [
+  {
+    title: "Ecosystem Sustainability",
+    points: [
+      "The 2% fee funds essential operations without relying on outside financing.",
+      "Keeps the USF ecosystem independent and self-sustaining.",
+    ],
+  },
+  {
+    title: "Buyer Protection Guarantee",
+    points: [
+      "Ensures secure escrow-based holding until delivery is confirmed.",
+      "Helps finance the 7-day return window for added consumer confidence.",
+    ],
+  },
+  {
+    title: "Trust Through Transparency",
+    points: [
+      "The fee is clearly disclosed—no hidden charges.",
+      "Builds long-term trust between buyers and sellers.",
+    ],
+  },
+  {
+    title: "Reinforced Coin Value",
+    points: [
+      "A portion of fees is allocated to hedge capital, supporting coin price stability.",
+      "Encourages long-term holding and investor confidence.",
+    ],
+  },
+  {
+    title: "Supports Future Development",
+    points: [
+      "Helps fund technical upgrades, compliance, and service improvements.",
+      "Ensures USF remains secure, efficient, and regulatory-compliant.",
+    ],
+  },
 ];
 
 export const metadata = {
@@ -111,7 +157,21 @@ export default function Page() {
         ))}
       </div>
 
-      <h2 className={`text-3xl font-bold mb-3 text-center`}>Disclaimer</h2>
+      <div>
+        <h2 className="text-xl md:text-3xl font-bold">Advantages of USF Peer-to-Peer Transfer Fees</h2>
+        {usfAdvantages.map((advantage, index) => (
+          <div key={index}>
+            <h3 className="md:text-xl font-semibold mt-5">{advantage.title}</h3>
+            <ul className="list-disc list-inside mt-2.5">
+              {advantage.points.map((point, idx) => (
+                <li key={idx}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <h2 className={`text-3xl font-bold mt-16 mb-3 text-center`}>Disclaimer</h2>
 
       <p className="mb-8 text-center">
         USFranc is not an equity, investment opportunity, investment contract or
