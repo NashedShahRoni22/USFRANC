@@ -11,6 +11,8 @@ import bittsLogo from "../assets/bitss_logo.png";
 import Container from "../components/shared/Container";
 import { smtpexpressClient } from "./smtp";
 import Image from "next/image";
+import contactImg from "../assets/contact.png";
+import { FiMapPin, FiMail, FiPhone, FiGlobe, FiShield } from "react-icons/fi";
 
 const page = () => {
   //   const navigate = useNavigate();
@@ -184,8 +186,180 @@ const page = () => {
     });
   };
 
+  const primaryColor = "#7B5E00";
+
   return (
     <Container className="">
+      <div className="py-16">
+        <div className="flex flex-col md:flex-row md:items-center gap-12 md:gap-16">
+          {/* Image Section */}
+          <div className="md:w-1/2">
+            <div className="relative rounded-xl overflow-hidden border border-gray-100">
+              <Image src={contactImg} alt="Contact Our Crypto Team" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="md:w-1/2 space-y-8">
+            <div>
+              <span
+                className="inline-flex items-center gap-2 text-sm font-medium mb-3"
+                style={{ color: primaryColor }}
+              >
+                <FiShield size={30} /> SECURE COMMUNICATION
+              </span>
+              <h1 className="text-3xl font-light tracking-tight text-gray-900 sm:text-4xl">
+                Connect with our{" "}
+                <span style={{ color: primaryColor }}>crypto team</span>
+              </h1>
+              <p className="mt-2 text-gray-600">
+                Reach out for partnerships, compliance inquiries, or network
+                management.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {/* Locations */}
+              <div className="flex items-start gap-4">
+                <div
+                  className="mt-1 flex-shrink-0"
+                  style={{ color: primaryColor }}
+                >
+                  <FiMapPin size={20} />
+                </div>
+                <div>
+                  <h3 className="text-sm font-medium text-gray-900">
+                    OUR LOCATIONS
+                  </h3>
+                  <div className="mt-2 space-y-3 text-sm text-gray-600">
+                    <div className="pb-2 border-b border-gray-100">
+                      <p
+                        className="font-medium"
+                        style={{ color: primaryColor }}
+                      >
+                        USFRANC LTD{" "}
+                        <span className="text-gray-500">(Reg N° 10325829)</span>
+                      </p>
+                      <p className="mt-1">
+                        4th Floor, Silverstream House,
+                        <br />
+                        45 Fitzroy Street, London,
+                        <br />
+                        England, W1T 6EB, UK
+                      </p>
+                    </div>
+
+                    <div className="pb-2 border-b border-gray-100">
+                      <p
+                        className="font-medium"
+                        style={{ color: primaryColor }}
+                      >
+                        French Hybrid Office
+                      </p>
+                      <p className="mt-1">
+                        8 Rue Dublin, 34200 Sète, France
+                        <br />
+                        <span className="text-gray-500">
+                          Compliance & Network Management
+                        </span>
+                      </p>
+                    </div>
+
+                    <div>
+                      <p
+                        className="font-medium"
+                        style={{ color: primaryColor }}
+                      >
+                        SAS Affin{" "}
+                        <span className="text-gray-500">
+                          (Reg N° 803965227)
+                        </span>
+                      </p>
+                      <p className="mt-1">
+                        8 Rue Dublin, 34200 Sète, France
+                        <br />
+                        <span className="text-gray-500">
+                          USFRANC Reserve Management Entity Manager
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Methods */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex items-start gap-4">
+                  <div
+                    className="mt-1 flex-shrink-0"
+                    style={{ color: primaryColor }}
+                  >
+                    <FiMail size={20} />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900">
+                      SECURE EMAIL
+                    </h3>
+                    <p className="mt-2 text-sm" style={{ color: primaryColor }}>
+                      info@usfranc.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div
+                    className="mt-1 flex-shrink-0"
+                    style={{ color: primaryColor }}
+                  >
+                    <FiGlobe size={20} />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900">
+                      BLOCKCHAIN WEB
+                    </h3>
+                    <p className="mt-2 text-sm" style={{ color: primaryColor }}>
+                      www.usfranc.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div
+                    className="mt-1 flex-shrink-0"
+                    style={{ color: primaryColor }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900">
+                      TECH SUPPORT
+                    </h3>
+                    <p className="mt-2 text-sm" style={{ color: primaryColor }}>
+                      dev@usfranc.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h2 className="text-3xl font-semibold text-center text-gray-800 mt-8 md:mt-16 mb-4">
         Get In Touch
       </h2>
@@ -355,7 +529,7 @@ const page = () => {
 
           <div className="mt-6 text-center text-xs text-gray-600">
             <p>
-              <BiCopyright /> 2024 BFIN. BITSS by BFIN. All rights reserved.
+              © 2024 BFIN. BITSS by BFIN. All rights reserved.
             </p>
             <div className="flex flex-col items-center">
               <Image
@@ -383,33 +557,6 @@ const page = () => {
             className="rounded-lg shadow-lg"
           ></iframe>
         </div>
-      </div>
-
-      <div className="mb-16">
-        <p>
-          <strong>USFRANC LTD</strong> (Reg N° 10325829)
-        </p>
-        <p>
-          <strong>Correspondence Address:</strong>
-          <br />
-          4th Floor, Silverstream House,
-          <br />
-          45 Fitzroy Street, London,
-          <br />
-          England, W1T 6EB, UK
-        </p>
-        <p>
-          <strong>USFRANC LTD (French Hybrid Office)</strong>
-          <br />
-          Compliance & Network Management
-          <br />8 Rue Dublin, 34200 Sète, France
-        </p>
-        <p>
-          <strong>SAS Affin</strong> (Reg N° 803965227, RCS Montpellier)
-          <br />
-          (Appointed USFranc Reserve Management Entity Manager)
-          <br />8 Rue Dublin, 34200 Sète, France
-        </p>
       </div>
     </Container>
   );

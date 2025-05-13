@@ -6,14 +6,14 @@ export default function Page() {
     <Container>
       <div className="py-12 px-4">
         <h1 className="text-3xl font-bold mb-6">
-          USFranc Capital Hedge Policy
+          USFRANC Capital Hedge Policy
         </h1>
 
         <section className="mb-6">
           <h2 className="text-xl font-semibold mb-2">1. Overview</h2>
           <p>
-            USFranc’s Capital Hedge Policy establishes a strict framework to
-            protect and anchor the value of USFranc cryptocurrency (ISF).
+            USFRANC’s Capital Hedge Policy establishes a strict framework to
+            protect and anchor the value of USFRANC cryptocurrency (ISF).
           </p>
         </section>
 
@@ -149,7 +149,7 @@ export default function Page() {
         <section className="mb-6">
           <h2 className="text-xl font-semibold mb-2">7. Policy Summary</h2>
           <p>
-            The USFranc Capital HFEF is: 100% sovereign-based — no corporate or
+            The USFRANC Capital HFEF is: 100% sovereign-based — no corporate or
             speculative risk. Fully transparent, with decentralized validator
             control. Designed not for long-term stability, regulatory alignment,
             and trustworthiness.

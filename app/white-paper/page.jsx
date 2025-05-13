@@ -51,26 +51,26 @@ const merchantFeatures = [
   "Smart contract automation simplifies transactions.",
 ];
 
-export default function USFrancWhitePaper() {
+export default function USFRANCWhitePaper() {
   return (
     <Container>
       {/* Page Title */}
       <h1 className="text-3xl font-bold mb-6 text-center mt-8 md:mt-16">
-        USFranc (USF) – White Paper
+        USFRANC (USF) – White Paper
       </h1>
 
       {/* Comparison Table */}
       <div>
         <h2 className="text-2xl font-semibold mb-4 text-center">
-          What USFranc Is and Is Not
+          What USFRANC Is and Is Not
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full table-auto  text-left">
             <thead className="bg-gray-100">
               <tr>
-                <th className="px-4 py-2 border text-black">What USFranc Is</th>
+                <th className="px-4 py-2 border text-black">What USFRANC Is</th>
                 <th className="px-4 py-2 border text-black">
-                  What USFranc Is Not
+                  What USFRANC Is Not
                 </th>
               </tr>
             </thead>
@@ -147,7 +147,7 @@ export default function USFrancWhitePaper() {
         The founders will not receive any additional remuneration or crypto
         distributions in the first year. Treasury operations and all allocations
         are conducted transparently, with validator oversight via on-chain
-        governance. USFranc commits to fixed, capped issuance and no
+        governance. USFRANC commits to fixed, capped issuance and no
         inflationary emissions beyond this model.
       </p>
     </Container>

@@ -45,7 +45,7 @@ export default function Page() {
     <Container>
       <div className="py-12 px-4">
         <h1 className="text-3xl font-semibold text-center text-gray-800">
-          USFranc Private Sale Order Form
+          USFRANC Private Sale Order Form
         </h1>
         <form onSubmit={handleSubmit} className="space-y-8 p-6 shadow rounded">
           {/* Buyer Information */}
@@ -167,7 +167,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-gray-600">
-                  Quantity of USFranc (USF) Ordered:
+                  Quantity of USFRANC (USF) Ordered:
                 </label>
                 <input
                   type="number"
@@ -205,7 +205,7 @@ export default function Page() {
             </h2>
             <p>Bank Transfer: LCL Bank</p>
             <p>
-              Account Name: SAS Affin (USFranc Reserve Management Entity - Ref
+              Account Name: SAS Affin (USFRANC Reserve Management Entity - Ref
               USFRANC)
             </p>
             <p>IBAN: FR10 3000 2030 3700 0007 3122 J65</p>
@@ -218,11 +218,11 @@ export default function Page() {
               Buyer Acknowledgment
             </h2>
             <p>
-              I confirm my order of USFranc cryptocurrency and my intention to
+              I confirm my order of USFRANC cryptocurrency and my intention to
               transfer the full order amount in euros to the bank account
               provided.
               <br />
-              Upon receipt of payment, the corresponding USFranc coins will be
+              Upon receipt of payment, the corresponding USFRANC coins will be
               delivered to your Trust Wallet address.
               <br />
               Please send your wallet address to usfranc@bobosohomail.com.

@@ -6,14 +6,14 @@ export default function Page() {
     <Container>
       <div className="py-12 px-4">
         <h1 className="text-3xl font-bold mb-6">
-          USFranc Capital Reserve Transparency
+          USFRANC Capital Reserve Transparency
         </h1>
 
         <h2 className="text-xl font-semibold mb-4">
           How We Hedge Against Market Volatility
         </h2>
         <p className="mb-4">
-          At USFranc, our hedge reserve policy is built around security,
+          At USFRANC, our hedge reserve policy is built around security,
           sustainability, and responsible transparency.
         </p>
 
@@ -27,7 +27,7 @@ export default function Page() {
         <h2 className="text-xl font-semibold mb-4">
           Hedge Capital Policy Overview
         </h2>
-        <p className="mb-2">USFranc’s internal reserve strategy may include:</p>
+        <p className="mb-2">USFRANC’s internal reserve strategy may include:</p>
         <ul className="list-disc list-inside mb-4 space-y-1">
           <li>
             Government-related financial instruments (such as sovereign bonds
@@ -43,7 +43,7 @@ export default function Page() {
         <p className="mb-2">
           These internal reserves are not collateral-backed and do not grant
           coinholders any ownership or financial rights. Their sole function is
-          to ensure the long-term stability of the USFranc ecosystem.
+          to ensure the long-term stability of the USFRANC ecosystem.
         </p>
       </div>
     </Container>

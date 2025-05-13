@@ -51,7 +51,7 @@ export default function page() {
             <strong>Pre-sale conditions:</strong> A sales certificate will be
             issued to the cryptocurrency buyer once the transferred funds are
             received. The buyer must open a trusted wallet and send the details
-            to USFranc on the launch day. The buyer's wallet will be credited
+            to USFRANC on the launch day. The buyer's wallet will be credited
             and the certificate will be canceled. Once the buyer's wallet is
             credited.
           </p>

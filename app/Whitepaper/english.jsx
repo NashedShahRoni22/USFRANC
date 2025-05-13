@@ -2,27 +2,27 @@ const whitePaperSectionsEN = [
   {
     title: "1. Executive Summary",
     content:
-      "USFranc is a decentralized cryptocurrency coin built for real-world payment usage, combining Proof of Work (PoW) and Proof of Stake (PoS) consensus mechanisms. The project aims to provide a stable, secure, and compliant digital currency for both online and retail transactions."
+      "USFRANC is a decentralized cryptocurrency coin built for real-world payment usage, combining Proof of Work (PoW) and Proof of Stake (PoS) consensus mechanisms. The project aims to provide a stable, secure, and compliant digital currency for both online and retail transactions."
   },
   {
     title: "2. Purpose and Vision",
     content:
-      "USFranc is created to serve as a digital payment currency, allowing individuals and businesses to send, receive, and settle payments securely and transparently. It includes an escrow-inspired transaction model to hold funds until product delivery and post-sale period validations."
+      "USFRANC is created to serve as a digital payment currency, allowing individuals and businesses to send, receive, and settle payments securely and transparently. It includes an escrow-inspired transaction model to hold funds until product delivery and post-sale period validations."
   },
   {
     title: "3. Usage Model",
     content:
-      "USFranc functions as a medium of exchange. Coins are held in wallets, used for purchasing goods or services, and converted by merchants when delivery is confirmed. Funds remain on hold until the transaction is verified, with a 7-day post-delivery lockout, ensuring user protection without offering financial returns."
+      "USFRANC functions as a medium of exchange. Coins are held in wallets, used for purchasing goods or services, and converted by merchants when delivery is confirmed. Funds remain on hold until the transaction is verified, with a 7-day post-delivery lockout, ensuring user protection without offering financial returns."
   },
   {
     title: "4. Technical Architecture",
     content:
-      "USFranc operates on a dual-layer blockchain: a Litecoin-fork PoW mainnet and a PoS sidechain for smart contract execution. This hybrid model ensures energy-efficient validation with high network resilience."
+      "USFRANC operates on a dual-layer blockchain: a Litecoin-fork PoW mainnet and a PoS sidechain for smart contract execution. This hybrid model ensures energy-efficient validation with high network resilience."
   },
   {
     title: "5. Coin Distribution and Governance",
     content:
-      "USFranc issues a total of 115 million coins:",
+      "USFRANC issues a total of 115 million coins:",
     list: [
       "67% are pegged to low-risk capital reserves",
       "10 million for investors (unhedged)",
@@ -37,7 +37,7 @@ const whitePaperSectionsEN = [
   {
     title: "7. Legal Classification & Risk",
     content:
-      "USFranc is not a security, e-money, or regulated investment. It is classified as a cryptocurrency coin. No interest, guaranteed return, or asset claims exist. Users assume full risk of loss."
+      "USFRANC is not a security, e-money, or regulated investment. It is classified as a cryptocurrency coin. No interest, guaranteed return, or asset claims exist. Users assume full risk of loss."
   },
   {
     title: "8. Regulatory Compliance",
@@ -64,7 +64,7 @@ const whitePaperSectionsEN = [
   {
     title: "9. Terms and Conditions",
     content:
-      "Users agree to use USFranc solely as a cryptocurrency. No investment rights or financial services are offered. Access is restricted in the U.S., UK, NY, and sanctioned regions."
+      "Users agree to use USFRANC solely as a cryptocurrency. No investment rights or financial services are offered. Access is restricted in the U.S., UK, NY, and sanctioned regions."
   },
   {
     title: "10. Transparency and Reporting",
@@ -79,7 +79,7 @@ const whitePaperSectionsEN = [
 export default function EnglishPage() {
   return (
     <section className="py-12 px-4">
-      <h1 className="text-3xl font-bold mb-4 text-logo">USFranc Whitepaper</h1>
+      <h1 className="text-3xl font-bold mb-4 text-logo">USFRANC Whitepaper</h1>
       <p className="text-sm text-gray-500 mb-10">
         <strong>Version 1.0</strong> - April 2025
       </p>

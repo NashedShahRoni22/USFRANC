@@ -6,7 +6,7 @@ export default function Page() {
     <Container>
       <div className="py-12 px-4">
         <h1 className="text-3xl font-bold mb-6">
-          USFranc Hedge Capital Investments Overview
+          USFRANC Hedge Capital Investments Overview
         </h1>
 
         <p className="mb-4">
@@ -14,7 +14,7 @@ export default function Page() {
         </p>
         <p className="mb-6">
           This is a non-exhaustive listing of active and planned capital
-          reserves used to stabilize USFranc operations. This list is
+          reserves used to stabilize USFRANC operations. This list is
           illustrative and does not represent any financial instrument offering.
         </p>
 
@@ -180,13 +180,13 @@ export default function Page() {
             Ownership and Disclaimer
           </h2>
           <p className="mb-2">
-            All listed investments are fully held and controlled by USFranc
-            corporate entities (including USFranc SAS, USFranc Ltd, USFranc LLC,
+            All listed investments are fully held and controlled by USFRANC
+            corporate entities (including USFRANC SAS, USFRANC Ltd, USFRANC LLC,
             and regional subsidiaries). These reserves are allocated for
             internal project stability and operational continuity.
           </p>
           <p>
-            USFranc cryptocurrency holders have no ownership, legal right,
+            USFRANC cryptocurrency holders have no ownership, legal right,
             security interest, or financial claim to these assets under any
             jurisdiction.
           </p>

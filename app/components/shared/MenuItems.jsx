@@ -23,6 +23,14 @@ export const MenuItems = [
         path: "/about",
       },
       {
+        title: "What is USF and What not?",
+        path: "/difference",
+      },
+      {
+        title: "USF peer to peer transfer fees",
+        path: "/usf-peer-to-peer-transfer-fees",
+      },
+      {
         title: "Whitepaper",
         path: "/Whitepaper",
       },

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import bannerImage from "../assets/investors.webp";
+import bannerImage from "../assets/investors.png";
 import Container from "../components/shared/Container";
 import Link from "next/link";
 
@@ -41,7 +41,7 @@ const investorSections = [
   {
     title: "Investor Notices",
     list: [
-      "USFranc is not a security or equity",
+      "USFRANC is not a security or equity",
       "No rights to dividends or voting powers",
       "Regulatory and tax status varies by country",
       "Investors are responsible for local compliance",
@@ -63,28 +63,28 @@ const reasonsToInvest = [
   {
     title: "1. Hedged Investment Security",
     content: [
-      "USFranc is designed to provide stability and growth. 67% of the initial sales are invested in low-risk government bonds, providing a hedged and secure foundation for your investment.",
+      "USFRANC is designed to provide stability and growth. 67% of the initial sales are invested in low-risk government bonds, providing a hedged and secure foundation for your investment.",
       "This ensures that your capital is protected while the coin gains traction in the market.",
     ],
   },
   {
     title: "2. Dual Consensus Model – PoW + PoS",
     content: [
-      "USFranc uses a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) system, combining the security and decentralization of PoW with the energy efficiency and scalability of PoS.",
+      "USFRANC uses a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) system, combining the security and decentralization of PoW with the energy efficiency and scalability of PoS.",
       "This dual validation system enhances the security and reliability of USF.",
     ],
   },
   {
     title: "3. Long-Term Growth Potential",
     content: [
-      "USFranc is positioned for long-term adoption, and our fixed issuance model (115 million USF) ensures that there is no inflationary risk.",
+      "USFRANC is positioned for long-term adoption, and our fixed issuance model (115 million USF) ensures that there is no inflationary risk.",
       "We’ve designed USF as a store of value and a useful asset for payments, with guaranteed buyback options to protect investors.",
     ],
   },
   {
     title: "4. Clear Utility with Real-World Use Cases",
     content: [
-      "Unlike many speculative coins, USFranc is built with clear utility. USF can be used for:",
+      "Unlike many speculative coins, USFRANC is built with clear utility. USF can be used for:",
     ],
     list: [
       "Peer-to-peer transfers",
@@ -95,46 +95,46 @@ const reasonsToInvest = [
   {
     title: "5. Early Investor Advantage",
     content: [
-      "Investing in USFranc early gives you a first-mover advantage.",
+      "Investing in USFRANC early gives you a first-mover advantage.",
       "With limited access to 10 million USF coins at a favorable 3x return ratio, early investors have the chance to benefit as USF grows in value.",
     ],
   },
   {
     title: "6. Fully Decentralized and Community Governed",
     content: [
-      "USFranc is decentralized, meaning no central authority controls the currency.",
+      "USFRANC is decentralized, meaning no central authority controls the currency.",
       "With community governance, decisions about USF’s future will be made collectively, ensuring transparency and fairness.",
     ],
   },
   {
     title: "7. Compliance with Global Regulations",
     content: [
-      "USFranc is designed to comply with international cryptocurrency regulations, offering security and transparency for investors in regions where digital assets are gaining acceptance.",
+      "USFRANC is designed to comply with international cryptocurrency regulations, offering security and transparency for investors in regions where digital assets are gaining acceptance.",
     ],
   },
   {
     title: "8. Future-Proof and Secure",
     content: [
-      "With an emphasis on transparency, security, and scalability, USFranc is designed to stand the test of time and adapt to future blockchain advancements and regulations.",
+      "With an emphasis on transparency, security, and scalability, USFRANC is designed to stand the test of time and adapt to future blockchain advancements and regulations.",
     ],
   },
 ];
 
 const investContent = {
   introHeading:
-    "Invest in USFranc (USF) – A Cryptocurrency Built for Stability and Growth!",
+    "Invest in USFRANC (USF) – A Cryptocurrency Built for Stability and Growth!",
   subHeading: "Join the Future of Digital Currency",
   introParagraph:
-    "USFranc (USF) is a next-generation cryptocurrency built on a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) blockchain, designed for long-term stability, transparency, and massive growth potential. USF offers a unique guaranteed hedge, backed by 67% of its first sales in low-risk government bonds, ensuring your investment’s stability from the start.",
+    "USFRANC (USF) is a next-generation cryptocurrency built on a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) blockchain, designed for long-term stability, transparency, and massive growth potential. USF offers a unique guaranteed hedge, backed by 67% of its first sales in low-risk government bonds, ensuring your investment’s stability from the start.",
   sections: [
     {
-      title: "Why Invest in USFranc?",
+      title: "Why Invest in USFRANC?",
       points: [
         "Guaranteed Hedge: 67% of first sales invested into low-risk government bonds",
         "Dual Consensus Model: Using the power of both PoW and PoS for robust security",
         "Utility-Driven: USF can be used for peer-to-peer transfers, merchant payments with escrow, and as a store of value",
         "Attractive Investor Offering: Get in early with 3x return ratio for investors — 10 million USF coins allocated to investors at the initial sale",
-        "Secured and Transparent: USFranc is a decentralized and compliant cryptocurrency, designed to grow in line with market demand and regulatory frameworks",
+        "Secured and Transparent: USFRANC is a decentralized and compliant cryptocurrency, designed to grow in line with market demand and regulatory frameworks",
       ],
     },
     {
@@ -148,7 +148,7 @@ const investContent = {
     {
       title: "How to Invest:",
       paragraph:
-        "Visit our website to sign up and receive detailed information about how to participate in the USFranc sale. Invest early and receive priority access to USFranc crypto coins with strong upside potential!",
+        "Visit our website to sign up and receive detailed information about how to participate in the USFRANC sale. Invest early and receive priority access to USFRANC crypto coins with strong upside potential!",
     },
   ],
   finalCTA: {
@@ -175,7 +175,7 @@ export default function Page() {
             Investor Information
           </h2>
           <p className="mt-6 text-xl md:text-2xl">
-            USFranc is a utility crypto coins backed by capital and governed
+            USFRANC is a utility crypto coins backed by capital and governed
             with transparency. This page outlines how early participants can
             engage, what rights they have, and how the crypto coins is
             structured.
@@ -185,7 +185,7 @@ export default function Page() {
           <Image
             alt="Investors Banner Image"
             src={bannerImage}
-            height={450}
+            height={"600"}
             width={""}
             className="rounded"
           />
@@ -194,7 +194,7 @@ export default function Page() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         {investorSections.map((section, index) => (
-          <div key={index} className="mb-8 p-6 rounded-2xl border border-logo">
+          <div key={index} className="mb-8 p-6 rounded-xl shadow">
             <h2
               className={`text-${index === 0 ? "3xl" : "2xl"} font-bold mb-3`}
             >
@@ -219,18 +219,18 @@ export default function Page() {
         ))}
       </div>
 
-      <div className="mt-8 md:w-1/2 mx-auto p-8 shadow rounded bg-primary text-center">
+      <div className="mt-8 md:w-1/2 mx-auto p-16 shadow rounded bg-primary text-center">
         <h5 className="text-4xl font-semibold">Contact</h5>
         <p className="text-2xl">Reach us directly at: usfranc@bobosohomail.com</p>
       </div>
 
-      {/* Why Invest in USFranc (USF)? */}
+      {/* Why Invest in USFRANC (USF)? */}
       <h1 className="text-3xl font-bold mb-6 mt-8 md:mt-16 text-center">
-        Why Invest in USFranc (USF)?
+        Why Invest in USFRANC (USF)?
       </h1>
       <div className="grid gap-4 sm:grid-cols-2">
         {reasonsToInvest.map((reason, index) => (
-          <div key={index} className="mb-8 p-6 rounded-2xl border border-logo">
+          <div key={index} className="mb-8 p-6 rounded-xl shadow">
             <h2 className="text-2xl font-semibold mb-3">{reason.title}</h2>
             {reason.content &&
               reason.content.map((paragraph, i) => (
@@ -249,7 +249,7 @@ export default function Page() {
         ))}
       </div>
 
-      {/* Invest in USFranc (USF) – A Cryptocurrency Built for Stability and Growth!, */}
+      {/* Invest in USFRANC (USF) – A Cryptocurrency Built for Stability and Growth!, */}
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 mt-8">
         {investContent.introHeading}
       </h2>

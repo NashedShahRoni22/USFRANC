@@ -7,7 +7,7 @@ export default function Compliance() {
   const [lang, setLang] = useState("en");
   return (
     <section>
-      <div className="flex gap-4 mt-8">
+      <div className="flex gap-4">
         <button
           onClick={() => setLang("en")}
           className={`px-4 py-2.5 rounded ${

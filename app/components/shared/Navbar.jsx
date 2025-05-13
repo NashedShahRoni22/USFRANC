@@ -67,7 +67,16 @@ export default function Navbar() {
                     <BiChevronDown />
                   </button>
                 ) : (
-                  <Link href={menu.path} className="font-semibold">
+                  <Link
+                    onClick={() =>
+                      setShowChildNav({
+                        id: null,
+                        state: false,
+                      })
+                    }
+                    href={menu.path}
+                    className="font-semibold"
+                  >
                     {menu.title}
                   </Link>
                 )}
@@ -78,7 +87,17 @@ export default function Navbar() {
                       {" "}
                       {menu.child?.map((mc, childIndex) => (
                         <li key={childIndex}>
-                          <Link href={mc.path}>{mc.title}</Link>
+                          <Link
+                            onClick={() =>
+                              setShowChildNav({
+                                id: null,
+                                state: false,
+                              })
+                            }
+                            href={mc.path}
+                          >
+                            {mc.title}
+                          </Link>
                         </li>
                       ))}{" "}
                     </ul>

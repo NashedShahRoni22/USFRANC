@@ -4,6 +4,8 @@ import { RiRefund2Fill } from "react-icons/ri";
 import logoBanner from "../../assets/logo_banner.png";
 import Image from "next/image";
 import Container from "../shared/Container";
+import flowImage from "../../assets/flow.svg";
+import SecurePayment from "../../assets/secure_payment.png";
 
 export default function HowItWorks() {
   const data = [
@@ -33,51 +35,37 @@ export default function HowItWorks() {
   ];
   return (
     <Container>
-      <div className="py-8 md:py-16">
-        <h5 className="font-semibold text-3xl md:text-4xl text-center">
+      <div className="py-20">
+        <Image
+          alt="banner_image"
+          height={""}
+          width={""}
+          src={SecurePayment}
+          className="mt-8 md:mt-16 min-w-full rounded-xl"
+        />
+        {/* Flow Steps */}
+        {/* <h5 className="mt-8 md:mt-16 font-semibold text-3xl md:text-4xl text-center">
           How USF secures your purchase payments?
-        </h5>
-
-        <div className="mt-8 md:mt-16">
-          {/* Left - Flow Steps */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8  relative z-0">
-            {data.map((item, index) => (
-              <React.Fragment key={index}>
-                <div className="flex flex-col items-center gap-4 p-4">
-                  <div className="text-logo text-6xl">{item.icon}</div>
-                  <h3 className="text-xl font-semibold text-center">
-                    {item.title}
-                  </h3>
-                  <ul className="list-disc list-inside">
-                    {item.list.map((l, index) => (
-                      <li key={index}>{l}</li>
-                    ))}
-                  </ul>
+        </h5> */}
+        <div className="mt-4 md:mt-8 flex flex-col md:flex-row justify-center items-center gap-8  relative z-0">
+          {data.map((item, index) => (
+            <React.Fragment key={index}>
+              <div className="flex flex-col gap-4 p-8 rounded-2xl shadow-lg min-h-[280px]">
+                <div className="text-logo text-6xl">{item.icon}</div>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <ul className="list-disc list-inside">
+                  {item.list.map((l, index) => (
+                    <li key={index}>{l}</li>
+                  ))}
+                </ul>
+              </div>
+              {index < data.length - 1 && (
+                <div className="text-logo text-3xl">
+                  <FaArrowDown className="md:rotate-270" />
                 </div>
-                {index < data.length - 1 && (
-                  <div className="text-logo text-3xl">
-                    <FaArrowDown className="md:rotate-270" />
-                  </div>
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-
-          {/* Right - Crypto Coin Snapshot */}
-          <div className="md:w-1/2 lg:1/4 md:mx-auto mt-8 md:mt-16">
-            <div className="border border-logo rounded-2xl p-6 bg-white shadow-lg">
-              <h5 className="font-semibold text-2xl md:text-3xl mb-4">
-                USF Transection Fees:
-              </h5>
-              <ul className="list-disc space-y-2 ml-5 text-xl">
-                <li>A 2% admin fee is applied to peer-to-peer transactions.</li>
-                <li>
-                  Collected fees are allocated to operational reserves and
-                  long-term hedge capital
-                </li>
-              </ul>
-            </div>
-          </div>
+              )}
+            </React.Fragment>
+          ))}
         </div>
 
         <div className="flex justify-center">

@@ -1,14 +1,14 @@
 export default function FrancePage() {
   const complianceSectionsFRANCE = [
     {
-      title: "1. Classification Juridique de USFranc",
+      title: "1. Classification Juridique de USFRANC",
       content:
-        "USFranc n'est ni un titre financier, ni une monnaie électronique, ni un produit financier. Il s'agit d'une cryptomonnaie décentralisée destinée aux paiements en ligne et en point de vente. USFranc n'est pas conçu ni proposé comme un produit d'investissement, de spéculation ou de rendement.",
+        "USFRANC n'est ni un titre financier, ni une monnaie électronique, ni un produit financier. Il s'agit d'une cryptomonnaie décentralisée destinée aux paiements en ligne et en point de vente. USFRANC n'est pas conçu ni proposé comme un produit d'investissement, de spéculation ou de rendement.",
       list: [
         "Aucun droit à des profits n'est accordé aux détenteurs.",
         "Aucun dividende, intérêt ou rendement n’est distribué.",
         "Aucun droit sur les actifs ou les réserves couvertes n’est accordé.",
-        "USFranc n’est pas adossé à une monnaie fiduciaire ou une marchandise et ne constitue pas un stablecoin.",
+        "USFRANC n’est pas adossé à une monnaie fiduciaire ou une marchandise et ne constitue pas un stablecoin.",
       ],
     },
     {
@@ -17,7 +17,7 @@ export default function FrancePage() {
         {
           subtitle: "Règlement MiCA",
           content:
-            "USFranc est classé comme une cryptomonnaie utilitaire. Un livre blanc détaillé est publié conformément aux exigences de MiCA.",
+            "USFRANC est classé comme une cryptomonnaie utilitaire. Un livre blanc détaillé est publié conformément aux exigences de MiCA.",
         },
         {
           subtitle: "Conformité RGPD",
@@ -34,12 +34,12 @@ export default function FrancePage() {
     {
       title: "3. France (AMF, ACPR, Loi PACTE)",
       content:
-        "USFranc ne fournit pas de services réglementés nécessitant un enregistrement PSAN. Le livre blanc est conforme aux directives de l'AMF, et la documentation est disponible en français.",
+        "USFRANC ne fournit pas de services réglementés nécessitant un enregistrement PSAN. Le livre blanc est conforme aux directives de l'AMF, et la documentation est disponible en français.",
     },
     {
       title: "4. Royaume-Uni (Réglementation FCA)",
       content:
-        "USFranc n'est pas proposé aux résidents britanniques. Aucune activité promotionnelle ou service de garde n’est offert. L’accès au site est restreint et des avertissements sont en place.",
+        "USFRANC n'est pas proposé aux résidents britanniques. Aucune activité promotionnelle ou service de garde n’est offert. L’accès au site est restreint et des avertissements sont en place.",
     },
     {
       title: "5. États-Unis (SEC, FinCEN, CFTC, IRS)",
@@ -47,17 +47,17 @@ export default function FrancePage() {
         {
           subtitle: "SEC",
           content:
-            "USFranc n’est pas un titre financier selon le test de Howey.",
+            "USFRANC n’est pas un titre financier selon le test de Howey.",
         },
         {
           subtitle: "FinCEN",
           content:
-            "USFranc n’agit pas comme un transmetteur de fonds. Si le service est étendu aux paiements américains, une inscription MSB sera effectuée avec KYC/AML.",
+            "USFRANC n’agit pas comme un transmetteur de fonds. Si le service est étendu aux paiements américains, une inscription MSB sera effectuée avec KYC/AML.",
         },
         {
           subtitle: "CFTC & IRS",
           content:
-            "USFranc n’est pas utilisé dans des produits dérivés. L’information fiscale est mise à disposition des utilisateurs.",
+            "USFRANC n’est pas utilisé dans des produits dérivés. L’information fiscale est mise à disposition des utilisateurs.",
         },
       ],
     },
@@ -68,7 +68,7 @@ export default function FrancePage() {
     },
     {
       title: "7. Juridictions Restreintes",
-      content: "USFranc n'est pas proposé dans les régions suivantes :",
+      content: "USFRANC n'est pas proposé dans les régions suivantes :",
       list: [
         "États-Unis",
         "Royaume-Uni",
@@ -89,7 +89,7 @@ export default function FrancePage() {
   return (
       <section className="py-12 px-4">
         <h1 className="text-3xl font-bold mb-4 text-logo">
-          Déclaration de Conformité - USFranc
+          Déclaration de Conformité - USFRANC
         </h1>
         <p className="text-sm text-gray-500 mb-10">
           <strong>Dernière mise à jour :</strong> Avril 2025

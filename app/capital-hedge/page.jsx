@@ -1,11 +1,13 @@
 import React from "react";
 import Container from "../components/shared/Container";
+import CapitalHedge from "../assets/capital_hedge.png";
+import Image from "next/image";
 
 const content = [
   {
     title: "Overview",
     body: [
-      "USFranc’s Capital Hedge Policy is the backbone of the project’s financial structure. It is designed to protect reserve assets, maintain trust, ensure liquidity, and align with the strictest regulatory and institutional standards.",
+      "USFRANC’s Capital Hedge Policy is the backbone of the project’s financial structure. It is designed to protect reserve assets, maintain trust, ensure liquidity, and align with the strictest regulatory and institutional standards.",
       "100% of the reserve capital generated from hedged USF sales will be invested exclusively into high-quality, sovereign-backed financial instruments and insured cash equivalents. The reserve will be managed under a transparent, auditable, and community-supervised framework.",
     ],
   },
@@ -31,7 +33,7 @@ const content = [
   {
     title: "Reserve Management",
     body: [
-      "The reserve will be centrally managed by an entity known as the USFranc Reserve Management Entity.",
+      "The reserve will be centrally managed by an entity known as the USFRANC Reserve Management Entity.",
       "Responsibilities of the Reserve Manager include: Executing the investment allocation according to the policy, maintaining liquidity levels, publishing quarterly reserve reports, and submitting to annual independent audits.",
     ],
   },
@@ -69,18 +71,27 @@ export const metadata = {
 export default function Page() {
   return (
     <Container>
-      {content.map((section, index) => (
-        <section key={index} className="">
-          <h2 className="text-2xl font-semibold text-logo mt-8">
-            {section.title}
-          </h2>
-          {section.body.map((text, idx) => (
-            <p key={idx} className="text-lg">
-              {text}
-            </p>
-          ))}
-        </section>
-      ))}
+      <Image
+        alt="banner_image"
+        height={""}
+        width={""}
+        src={CapitalHedge}
+        className="min-w-full rounded-xl shadow"
+      />
+      <section className="pb-20">
+        {content.map((section, index) => (
+          <div key={index}>
+            <h2 className="text-2xl font-semibold text-logo mt-8">
+              {section.title}
+            </h2>
+            {section.body.map((text, idx) => (
+              <p key={idx} className="text-lg">
+                {text}
+              </p>
+            ))}
+          </div>
+        ))}
+      </section>
     </Container>
   );
 }

@@ -1,4 +1,3 @@
-import BannerImage from "../../assets/banner_image.webp";
 import BannerImage2 from "../../assets/updated_banner_image.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,14 +5,14 @@ import Container from "../shared/Container";
 export default function Banner() {
   return (
     <Container>
-      <section className="lg:flex gap-8 items-center py-8 md:py-16">
+      <section className="lg:flex gap-8 items-center py-16 md:py-32">
         <div className="lg:w-2/3">
           <h2 className="text-5xl md:text-6xl font-bold">
             The Capital-Backed Utility Crypto Coin Built for trust and powered
             by multiple purpose.
           </h2>
           <p className="mt-6 text-xl md:text-2xl">
-            USFranc USFRANC is a decentralized cryptocurrency, using its own
+            USFRANC USFRANC is a decentralized cryptocurrency, using its own
             capital as a hedge fund in building trust and multi purpose for
             crypto users.
           </p>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bannerImage from "../assets/banner_image.webp";
 import Container from "../components/shared/Container";
+import aboutImg from "../assets/about.png";
 const sections = [
   {
     title: "Crypto Coins Purpose",
@@ -22,7 +23,7 @@ const sections = [
   {
     title: "Capital Reserve Model",
     content: [
-      "70% of first-sale proceeds are invested in low-risk assets (UK gilts, bonds). The remaining 30% covers operational costs and liquidity support. This structure gives USFranc stability and long-term support without custodial risk.",
+      "70% of first-sale proceeds are invested in low-risk assets (UK gilts, bonds). The remaining 30% covers operational costs and liquidity support. This structure gives USFRANC stability and long-term support without custodial risk.",
     ],
   },
   {
@@ -34,7 +35,7 @@ const sections = [
   {
     title: "Supply & Distribution",
     content: [
-      "USFranc will issue 100 million crypto coins in total, released in batches of 10 million. Each batch corresponds to a new issuance round and is governed by transparent economic policies.",
+      "USFRANC will issue 100 million crypto coins in total, released in batches of 10 million. Each batch corresponds to a new issuance round and is governed by transparent economic policies.",
     ],
   },
   {
@@ -54,44 +55,6 @@ const sections = [
   },
 ];
 
-const usfAdvantages = [
-  {
-    title: "Ecosystem Sustainability",
-    points: [
-      "The 2% fee funds essential operations without relying on outside financing.",
-      "Keeps the USF ecosystem independent and self-sustaining.",
-    ],
-  },
-  {
-    title: "Buyer Protection Guarantee",
-    points: [
-      "Ensures secure escrow-based holding until delivery is confirmed.",
-      "Helps finance the 7-day return window for added consumer confidence.",
-    ],
-  },
-  {
-    title: "Trust Through Transparency",
-    points: [
-      "The fee is clearly disclosed—no hidden charges.",
-      "Builds long-term trust between buyers and sellers.",
-    ],
-  },
-  {
-    title: "Reinforced Coin Value",
-    points: [
-      "A portion of fees is allocated to hedge capital, supporting coin price stability.",
-      "Encourages long-term holding and investor confidence.",
-    ],
-  },
-  {
-    title: "Supports Future Development",
-    points: [
-      "Helps fund technical upgrades, compliance, and service improvements.",
-      "Ensures USF remains secure, efficient, and regulatory-compliant.",
-    ],
-  },
-];
-
 export const metadata = {
   title: "About USFRANC | Building Trust in Decentralized Finance",
   description:
@@ -101,13 +64,13 @@ export const metadata = {
 export default function Page() {
   return (
     <Container>
-      <div className="lg:flex gap-8 items-center py-8 md:py-16">
+      <div className="lg:flex gap-8 items-center py-10 md:py-20">
         <div className="lg:w-1/2">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            What is USFranc?
+            What is USFRANC?
           </h2>
           <p className="mt-4 md:text-xl">
-            USFranc (USF) is a capital-backed utility crypto coins designed for
+            USFRANC (USF) is a capital-backed utility crypto coins designed for
             secure, real-world payments — both online and in-store. It enables
             blockchain-based commerce through a transparent, non-custodial
             wallet and smart contract model.
@@ -123,9 +86,10 @@ export default function Page() {
           />
         </div>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2">
+
+      <div className="mt-16 grid gap-4 sm:grid-cols-2">
         {sections.map((section, index) => (
-          <div key={index} className="mb-8 p-6 rounded-2xl border">
+          <div key={index} className="mb-8 p-6 rounded-xl shadow">
             <h2
               className={`text-${index === 0 ? "3xl" : "2xl"} font-bold mb-3`}
             >
@@ -157,24 +121,18 @@ export default function Page() {
         ))}
       </div>
 
-      <div>
-        <h2 className="text-xl md:text-3xl font-bold">Advantages of USF Peer-to-Peer Transfer Fees</h2>
-        {usfAdvantages.map((advantage, index) => (
-          <div key={index}>
-            <h3 className="md:text-xl font-semibold mt-5">{advantage.title}</h3>
-            <ul className="list-disc list-inside mt-2.5">
-              {advantage.points.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      <Image
+        src={aboutImg}
+        alt="about us frank"
+        className="w-full rounded-xl"
+      />
 
-      <h2 className={`text-3xl font-bold mt-16 mb-3 text-center`}>Disclaimer</h2>
+      <h2 className={`text-3xl font-bold mt-16 mb-3 text-center`}>
+        Disclaimer
+      </h2>
 
       <p className="mb-8 text-center">
-        USFranc is not an equity, investment opportunity, investment contract or
+        USFRANC is not an equity, investment opportunity, investment contract or
         security of any type. It is a utility crypto coins used to facilitate
         digital payments and purpose that suits the crypto holder in accordance
         with their local country crypto usage compliance.
