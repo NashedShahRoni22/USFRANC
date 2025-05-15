@@ -137,6 +137,9 @@ export default function Navbar() {
                       </button>
                     ) : (
                       <Link
+                        onClick={() =>
+                          setShowNav(false)
+                        }
                         href={menu.path}
                         className="flex items-center gap-3 px-5 py-3 hover:bg-gray-200 rounded-lg transition-colors duration-200 ease-in-out"
                       >
@@ -154,6 +157,9 @@ export default function Navbar() {
                               className="transition-colors duration-200 ease-in-out hover:bg-gray-100 rounded p-2"
                             >
                               <Link
+                                onClick={() =>
+                                  setShowNav(false)
+                                }
                                 href={mc.path}
                                 className="flex items-center"
                               >

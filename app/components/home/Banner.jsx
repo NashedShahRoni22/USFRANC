@@ -5,7 +5,7 @@ import Container from "../shared/Container";
 export default function Banner() {
   return (
     <Container>
-      <section className="lg:flex gap-8 items-center py-16 md:py-32">
+      <section className="lg:flex gap-8 items-center py-10">
         <div className="lg:w-2/3">
           <h2 className="text-5xl md:text-6xl font-bold">
             The Capital-Backed Utility Crypto Coin Built for trust and powered

@@ -16,7 +16,7 @@ const sections = [
       "A native cryptocurrency: USF is not a token or stablecoin but a fully independent cryptocurrency built on its own blockchain.",
       "A flexible medium of exchange: USF allows for global payments, transfers, and the exchange of value in a decentralized ecosystem.",
       "Decentralized: USF operates within a decentralized, transparent network with no central authority controlling the currency.",
-      "A store of value: You can hold USF as an asset, with the potential for appreciation and use in various transactions.",
+      "A store of value: You can hold USF crypto coin and use when required in various transactions, pay, hold or exchange or sell it",
     ],
   },
   {

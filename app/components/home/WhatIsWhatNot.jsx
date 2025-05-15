@@ -8,9 +8,6 @@ import { usePathname } from "next/navigation";
 
 export default function WhatIsWhatNot() {
   const pathname = usePathname();
-  console.log('====================================');
-  console.log(pathname);
-  console.log('====================================');
 
   const usFrancData = [
     {

@@ -1,5 +1,5 @@
 import Container from "../components/shared/Container";
-import amlImg from "../assets/aml.png";
+import amlImg from "../assets/aml (2).png";
 import Image from "next/image";
 
 const amlPolicySections = [

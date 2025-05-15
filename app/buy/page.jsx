@@ -1,4 +1,4 @@
-import React from "react";
+import buypageImage from "../assets/buy_page.png";
 import Container from "../components/shared/Container";
 import banner from "../assets/preorder_banner.png";
 import Image from "next/image";
@@ -8,31 +8,34 @@ export default function page() {
   return (
     <Container>
       <section className="py-12 md:py-20 rounded-lg">
-        <div className="text-center px-6">
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
-            <span className="text-logo">USFRANC</span> building trust for a
-            purpose - the only crypto coin hedged to its own capital.
-          </h1>
-          <p className="text-lg md:text-xl mb-8">
-            Join the private sale pre-order of{" "}
-            <span className="text-logo font-semibold">
-              5 million exclusive crypto coins
-            </span>{" "}
-            on offer. Built for trust, Powered by Purpose.
-            <br />
-            Cryptocoin prelaunch sales inputed as followers. 70% to capital
-            hedge fund 10% to réservés 20% to admin operational cost. The start
-            of the hedge fund will add value to USFRANC crypto coin.
-          </p>
-          <Link
-            href="/pre-order"
-            className="inline-block px-6 py-3 bg-logo text-white font-semibold text-lg rounded hover:opacity-90 transition"
-          >
-            Get USF Now
-          </Link>
-          <p className="mt-4 text-sm">
-            Private Sale Limited Supply — Secure Your Share Today
-          </p>
+        <div className="flex flex-col md:flex-row gap-[24px] items-center">
+          <Image src={buypageImage} alt="buy page image" height={600} width={""} className="rounded-xl shadow"/>
+          <div className="">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
+              <span className="text-logo">USFRANC</span> building trust for a
+              purpose - the only crypto coin hedged to its own capital.
+            </h1>
+            <p className="text-lg md:text-xl mb-8">
+              Join the private sale pre-order of{" "}
+              <span className="text-logo font-semibold">
+                5 million exclusive crypto coins
+              </span>{" "}
+              on offer. Built for trust, Powered by Purpose.
+              <br />
+              Cryptocoin prelaunch sales inputed as followers. 70% to capital
+              hedge fund 10% to réservés 20% to admin operational cost. The start
+              of the hedge fund will add value to USFRANC crypto coin.
+            </p>
+            <Link
+              href="/pre-order"
+              className="inline-block px-6 py-3 bg-logo text-white font-semibold text-lg rounded hover:opacity-90 transition"
+            >
+              Get USF Now
+            </Link>
+            <p className="mt-4 text-sm">
+              Private Sale Limited Supply — Secure Your Share Today
+            </p>
+          </div>
         </div>
 
         {/* Optional animated counter */}

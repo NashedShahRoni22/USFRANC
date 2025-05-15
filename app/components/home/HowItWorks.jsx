@@ -35,7 +35,7 @@ export default function HowItWorks() {
   ];
   return (
     <Container>
-      <div className="py-20">
+      <div className="py-10">
         <Image
           alt="banner_image"
           height={""}
@@ -47,13 +47,13 @@ export default function HowItWorks() {
         {/* <h5 className="mt-8 md:mt-16 font-semibold text-3xl md:text-4xl text-center">
           How USF secures your purchase payments?
         </h5> */}
-        <div className="mt-4 md:mt-8 flex flex-col md:flex-row justify-center items-center gap-8  relative z-0">
+        <div className="mt-4 md:mt-8 flex flex-col lg:flex-row justify-center items-center gap-8  relative z-0">
           {data.map((item, index) => (
             <React.Fragment key={index}>
               <div className="flex flex-col gap-4 p-8 rounded-2xl shadow-lg min-h-[280px]">
                 <div className="text-logo text-6xl">{item.icon}</div>
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <ul className="list-disc list-inside">
+                <h3 className="text-[25px] font-semibold">{item.title}</h3>
+                <ul className="list-disc list-inside text-[23px]">
                   {item.list.map((l, index) => (
                     <li key={index}>{l}</li>
                   ))}
@@ -61,7 +61,7 @@ export default function HowItWorks() {
               </div>
               {index < data.length - 1 && (
                 <div className="text-logo text-3xl">
-                  <FaArrowDown className="md:rotate-270" />
+                  <FaArrowDown className="lg:rotate-270" />
                 </div>
               )}
             </React.Fragment>

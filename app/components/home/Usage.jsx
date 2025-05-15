@@ -1,6 +1,5 @@
-import { FaLongArrowAltDown } from "react-icons/fa";
 import Container from "../shared/Container";
-import banner from "../../assets/banner_image.jpeg";
+import bannerImage from "../../assets/banner_image.jpeg";
 import Image from "next/image";
 
 export default function Usage() {
@@ -33,38 +32,33 @@ export default function Usage() {
 
   return (
     <Container>
-      <section className="flex flex-col gap-8 py-20">
-        <Image src={banner} alt="Banner" className="rounded-xl" />
+      <section className="py-10">
+        <Image alt="bannerImage"  src={bannerImage} height={""} width={""} className="rounded-xl shadow" />
+        <div className="text-center mt-16">
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Built for Trust, Powered by Purpose
+          </h1>
+          <p className="text-[20px] font-semibold mt-8 text-logo">
+            Recommended Usage of USF (Usage may differ according to crypto
+            users’ country regulations. Apply the appropriate use for your
+            purpose).
+          </p>
+        </div>
 
-        <div className="">
-          <div className="flex flex-col gap-12">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold">
-                Built for Trust, Powered by Purpose
-              </h1>
-              <p className="text-lg md:text-xl mt-8">
-                Recommended Usage of USF (Usage may differ according to crypto
-                users’ country regulations. Apply the appropriate use for your
-                purpose).
+        <div className="grid md:grid-cols-2 gap-6 w-full mt-16">
+          {usageItems.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white bg-opacity-90 backdrop-blur-md rounded-xl p-6 shadow-md transition-transform hover:scale-105 duration-300 ease-linear"
+            >
+              <p className={`font-semibold text-[25px] ${item.color}`}>
+                {item.title}
+              </p>
+              <p className="text-gray-800 text-[23px] mt-4">
+                {item.description}
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-6 w-full">
-              {usageItems.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white bg-opacity-90 backdrop-blur-md rounded-xl p-6 shadow-md transition-transform hover:scale-105 duration-300 ease-linear"
-                >
-                  <p className={`font-semibold text-2xl ${item.color}`}>
-                    {item.title}
-                  </p>
-                  <p className="text-gray-800 text-lg mt-4">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </Container>

@@ -7,8 +7,10 @@ const content = [
   {
     title: "Overview",
     body: [
-      "USFRANC’s Capital Hedge Policy is the backbone of the project’s financial structure. It is designed to protect reserve assets, maintain trust, ensure liquidity, and align with the strictest regulatory and institutional standards.",
-      "100% of the reserve capital generated from hedged USF sales will be invested exclusively into high-quality, sovereign-backed financial instruments and insured cash equivalents. The reserve will be managed under a transparent, auditable, and community-supervised framework.",
+      "USFRANC’s Capital Hedge Policy is the foundation of the USFRANC cryptocurrency coin, created to demonstrate that its value is backed by real, reserved capital — not by speculation or intangible hope, as is often the case in the wider crypto environment.",
+      "USFRANC Ltd uses its own proceeds from first sales to build a sovereign-backed reserve invested in low-risk government instruments and insured financial assets. This reserve is strictly owned and controlled by USFRANC Ltd and its associated companies.",
+      "100% of these funds are invested transparently and managed under an auditable, community-supervised framework, ensuring long-term stability, trust, and regulatory alignment.",
+      "This model proves that USFRANC is not a speculative asset, but a self-backed cryptocurrency and blockchain provider, grounded in financial responsibility and tangible reserves."
     ],
   },
   {

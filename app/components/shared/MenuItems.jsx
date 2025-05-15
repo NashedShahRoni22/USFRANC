@@ -27,8 +27,12 @@ export const MenuItems = [
         path: "/difference",
       },
       {
-        title: "USF peer to peer transfer fees",
+        title: "USF Peer to Peer Transfer Fees",
         path: "/usf-peer-to-peer-transfer-fees",
+      },
+      {
+        title: "USFRANC assurance statement",
+        path: "/usfranc-confidentiality-and-assurance-statement",
       },
       {
         title: "Whitepaper",

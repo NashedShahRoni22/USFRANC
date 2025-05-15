@@ -92,7 +92,7 @@ export default function WalletPage() {
               <ul className="space-y-3 text-left pl-5">
                 <li className="flex items-start gap-2">
                   <span style={{ color: "#7B5E00" }}>✓</span>
-                  <span>Multi-chain support for seamless asset management</span>
+                  <span>Multi-chain support for seamless crypto coin management</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span style={{ color: "#7B5E00" }}>✓</span>
