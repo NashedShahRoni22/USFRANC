@@ -2,11 +2,8 @@ import {
   FaHome,
   FaInfoCircle,
   FaUsers,
-  FaCog,
-  FaShieldAlt,
   FaShoppingCart,
   FaWallet,
-  FaPhone,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { GiHedgehog } from "react-icons/gi";
@@ -56,7 +53,19 @@ export const MenuItems = [
       },
     ],
   },
-  { title: "Investors", path: "/investors", icon: <FaUsers /> },
+  {
+    title: "Investors", path: "/investors", icon: <FaUsers />,
+    child: [
+      {
+        title: "Distribution Policy",
+        path: "usfranc-investors-distribution-policy"
+      },
+      {
+        title: "Terms & Condtions",
+        path: "investors-terms-and-condtions"
+      }
+    ]
+  },
   {
     title: "Capital Hedge",
     path: "/capital-hedge",
@@ -84,10 +93,27 @@ export const MenuItems = [
       },
     ],
   },
-  // { title: "Reserves", path: "/reserves", icon: <FaCog /> },
-  // { title: "Compliance", path: "/compliance", icon: <FaShieldAlt /> },
-  // { title: "Whitepaper", path: "/Whitepaper", icon: <FaShieldAlt /> },
-  { title: "Get USF", path: "/buy", icon: <FaShoppingCart /> },
+  {
+    title: "Get USF", path: "/buy", icon: <FaShoppingCart />, 
+    child: [
+      {
+        title: "Private Sale",
+        path: "/buy"
+      },
+      {
+        title: "Order USFRANC Now",
+        path: "/pre-order"
+      },
+      {
+        title: "Participation Terms",
+        path: "participation-terms"
+      },
+      {
+        title: "Terms & Conditions",
+        path: "participation-terms-and-condtions"
+      }
+    ]
+  },
   { title: "Wallet", path: "/wallet", icon: <FaWallet /> },
   { title: "Contact", path: "/contact", icon: <MdEmail /> },
 ];
