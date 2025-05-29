@@ -302,7 +302,7 @@ const page = () => {
                       SECURE EMAIL
                     </h3>
                     <p className="mt-2 text-sm" style={{ color: primaryColor }}>
-                      info@usfranc.com
+                      usfranc@bobosohomail.com
                     </p>
                   </div>
                 </div>

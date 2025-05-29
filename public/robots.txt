@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://usfranc.com/sitemap.xml
