@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { FiUpload, FiRefreshCw, FiCheckCircle, FiFile } from "react-icons/fi";
 import Container from "../components/shared/Container";
 
 export default function Page() {
@@ -16,8 +18,54 @@ export default function Page() {
     date: new Date().toLocaleDateString(),
   });
 
-  const [idDocumentName, setIdDocumentName] = useState("");
-  const [signatureFileName, setSignatureFileName] = useState("");
+  const [idDocuments, setIdDocuments] = useState({
+    front: null,
+    back: null,
+  });
+  const [addressProof, setAddressProof] = useState(null);
+  const [signatureFile, setSignatureFile] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Convert file to base64 for ImgBB
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result.split(",")[1]);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  // Upload single image to ImgBB
+  const uploadToImgBB = async (file) => {
+    try {
+      const base64Image = await convertToBase64(file);
+      const formData = new FormData();
+      formData.append("key", "b213c81cd4bc99c48b54bb6be2144da2");
+      formData.append("image", base64Image);
+
+      const response = await fetch("https://api.imgbb.com/1/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        return result.data.url;
+      } else {
+        throw new Error("Image upload failed");
+      }
+    } catch (error) {
+      console.error("ImgBB upload error:", error);
+      throw error;
+    }
+  };
+
+  const handleIdDocuments = (e, part) => {
+    const file = e.target.files[0];
+    setIdDocuments((prev) => ({ ...prev, [part]: file }));
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,9 +84,86 @@ export default function Page() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Form submitted");
+
+    console.log("form submitted");
+
+    // Validation
+    if (!idDocuments.front || !idDocuments.back || !signatureFile) {
+      alert("Please attach all necessary files.");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+
+      // Step 1: Upload all images to ImgBB
+      console.log("Uploading images...");
+      const [frontIdUrl, backIdUrl, addressProofUrl, signatureUrl] =
+        await Promise.all([
+          uploadToImgBB(idDocuments.front),
+          uploadToImgBB(idDocuments.back),
+          uploadToImgBB(addressProof),
+          uploadToImgBB(signatureFile),
+        ]);
+
+      console.log("Images uploaded successfully");
+
+      // Step 2: Prepare email data with image URLs
+      const emailData = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phoneNumber: formData.phoneNumber,
+        fullAddress: formData.fullAddress,
+        country: formData.country,
+        dob: formData.dob,
+        quantityOrdered: formData.quantityOrdered,
+        totalAmount: formData.totalAmount,
+        walletAddress: formData.walletAddress,
+        date: formData.date,
+        frontIdUrl: frontIdUrl,
+        backIdUrl: backIdUrl,
+        addressProofUrl: addressProofUrl,
+        signatureUrl: signatureUrl,
+        submissionDate: new Date().toISOString(),
+      };
+
+      // Step 3: Send email via EmailJS
+      console.log("Sending email...");
+      const result = await emailjs.send(
+        "service_iqqrtr1",
+        "template_nf4azqs",
+        emailData,
+        "ewm-4zeSsY4xNqiwh"
+      );
+
+      if (result.status === 200) {
+        alert("Form submitted successfully!");
+
+        // Reset form
+        setFormData({
+          fullName: "",
+          email: "",
+          phoneNumber: "",
+          fullAddress: "",
+          country: "",
+          dob: "",
+          quantityOrdered: "",
+          totalAmount: 0,
+          walletAddress: "",
+          date: new Date().toLocaleDateString(),
+        });
+        setIdDocuments({ front: null, back: null });
+        setAddressProof(null);
+        setSignatureFile(null);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Submission failed. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -128,34 +253,164 @@ export default function Page() {
               </div>
             </div>
 
-            <div>
+            {/* ID Document container */}
+            <div className="col-span-2">
               <label className="block text-gray-600 mb-1">
                 ID Document (Obligation — email to usfranc@bobosohomail.com)
               </label>
+
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {/* ID Front Part */}
+                <div className="border border-gray-300 rounded-md p-6">
+                  <input
+                    type="file"
+                    name="idDocumentFront"
+                    id="idDocumentFront"
+                    className="hidden"
+                    onChange={(e) => handleIdDocuments(e, "front")}
+                    accept="image/*,.pdf"
+                  />
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    {idDocuments.front ? (
+                      <>
+                        <div className="flex items-center gap-2">
+                          <FiCheckCircle className="h-5 w-5 text-green-500" />
+                          <span className="text-sm font-medium text-gray-700 truncate max-w-xs">
+                            {idDocuments.front.name}
+                          </span>
+                        </div>
+                        <label
+                          htmlFor="idDocumentFront"
+                          className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                        >
+                          <FiRefreshCw className="mr-2 h-4 w-4" />
+                          Change File
+                        </label>
+                        <p className="text-xs text-gray-500 mt-1">
+                          PDF, JPG or PNG
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <FiUpload className="h-7 w-7 text-gray-400" />
+                        <label
+                          htmlFor="idDocumentFront"
+                          className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                        >
+                          <FiUpload className="mr-2 h-4 w-4" />
+                          Upload Front of ID
+                        </label>
+                        <p className="text-xs text-gray-500 mt-1">
+                          PDF, JPG or PNG
+                        </p>
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                {/* ID Back Part */}
+                <div className="border border-gray-300 rounded-md p-6">
+                  <input
+                    type="file"
+                    name="idDocumentBack"
+                    id="idDocumentBack"
+                    className="hidden"
+                    onChange={(e) => handleIdDocuments(e, "back")}
+                    accept="image/*,.pdf"
+                  />
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    {idDocuments.back ? (
+                      <>
+                        <div className="flex items-center gap-2">
+                          <FiCheckCircle className="h-5 w-5 text-green-500" />
+                          <span className="text-sm font-medium text-gray-700 truncate max-w-xs">
+                            {idDocuments.back.name}
+                          </span>
+                        </div>
+                        <label
+                          htmlFor="idDocumentBack"
+                          className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                        >
+                          <FiRefreshCw className="mr-2 h-4 w-4" />
+                          Change File
+                        </label>
+                        <p className="text-xs text-gray-500 mt-1">
+                          PDF, JPG or PNG
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <FiUpload className="h-7 w-7 text-gray-400" />
+                        <label
+                          htmlFor="idDocumentBack"
+                          className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                        >
+                          <FiUpload className="mr-2 h-4 w-4" />
+                          Upload Back of ID
+                        </label>
+                        <p className="text-xs text-gray-500 mt-1">
+                          PDF, JPG or PNG
+                        </p>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Proof of Address */}
+          <div>
+            <label className="block text-gray-600 mb-1">
+              Proof of Address (optional)
+            </label>
+            <div className="border border-gray-300 rounded-md p-6">
               <input
                 type="file"
-                name="idDocument"
-                id="idDocument"
+                name="addressProof"
+                id="addressProof"
                 className="hidden"
-                required
-                onChange={(e) => {
-                  const file = e.target.files[0];
-                  if (file) {
-                    setIdDocumentName(file.name);
-                  }
-                }}
+                onChange={(e) => setAddressProof(e.target.files[0])}
+                accept="image/*,.pdf"
               />
-              <label
-                htmlFor="idDocument"
-                className="inline-block px-6 py-2 bg-logo text-white font-semibold rounded-md cursor-pointer hover:bg-logo-dark"
-              >
-                Choose File
-              </label>
-              {idDocumentName && (
-                <span className="ml-4 text-sm font-medium text-logo">
-                  {idDocumentName}
-                </span>
-              )}
+              <div className="flex flex-col items-center gap-3 text-center">
+                {addressProof ? (
+                  <>
+                    <div className="flex items-center gap-2">
+                      <FiCheckCircle className="h-5 w-5 text-green-500" />
+                      <span className="text-sm font-medium text-gray-700 truncate max-w-xs">
+                        {addressProof.name}
+                      </span>
+                    </div>
+                    <label
+                      htmlFor="addressProof"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                    >
+                      <FiRefreshCw className="mr-2 h-4 w-4" />
+                      Change File
+                    </label>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Accepted: Utility bill, bank statement, or
+                      government-issued document. PDF, JPG, or PNG
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <FiUpload className="h-7 w-7 text-gray-400" />
+                    <label
+                      htmlFor="addressProof"
+                      className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                    >
+                      <FiUpload className="mr-2 h-4 w-4" />
+                      Upload Address Proof
+                    </label>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Accepted: Utility bill, bank statement, or
+                      government-issued document. PDF, JPG, or PNG
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
           </div>
 
@@ -249,13 +504,7 @@ export default function Page() {
                 name="signatureFile"
                 id="signatureInput"
                 className="hidden"
-                required
-                onChange={(e) => {
-                  const file = e.target.files[0];
-                  if (file) {
-                    setSignatureFileName(file.name);
-                  }
-                }}
+                onChange={(e) => setSignatureFile(e.target.files[0])}
               />
               <label
                 htmlFor="signatureInput"
@@ -263,9 +512,9 @@ export default function Page() {
               >
                 Upload Signature
               </label>
-              {signatureFileName && (
+              {signatureFile && (
                 <span className="ml-4 text-sm font-medium text-logo">
-                  {signatureFileName}
+                  {signatureFile.name}
                 </span>
               )}
             </div>
