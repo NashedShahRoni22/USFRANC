@@ -25,6 +25,7 @@ export default function Page() {
   const [addressProof, setAddressProof] = useState(null);
   const [signatureFile, setSignatureFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isAcknowledged, setIsAcknowledged] = useState(false);
 
   // Convert file to base64 for ImgBB
   const convertToBase64 = (file) => {
@@ -87,7 +88,10 @@ export default function Page() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("form submitted");
+    if (!isAcknowledged) {
+      alert("Please check the acknowledgment checkbox to confirm your order.");
+      return;
+    }
 
     // Validation
     if (!idDocuments.front || !idDocuments.back || !signatureFile) {
@@ -178,7 +182,7 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-gray-700">
               Buyer Information
             </h2>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
               <div>
                 <label className="block text-gray-600">Full Name:</label>
                 <input
@@ -186,7 +190,7 @@ export default function Page() {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
@@ -197,13 +201,13 @@ export default function Page() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
               <div>
                 <label className="block text-gray-600">Phone Number:</label>
                 <input
@@ -211,7 +215,7 @@ export default function Page() {
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
@@ -222,13 +226,13 @@ export default function Page() {
                   name="fullAddress"
                   value={formData.fullAddress}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
               <div>
                 <label className="block text-gray-600">Country:</label>
                 <input
@@ -236,7 +240,7 @@ export default function Page() {
                   name="country"
                   value={formData.country}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
@@ -247,7 +251,7 @@ export default function Page() {
                   name="dob"
                   value={formData.dob}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
@@ -259,7 +263,7 @@ export default function Page() {
                 ID Document (Obligation — email to usfranc@bobosohomail.com)
               </label>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
                 {/* ID Front Part */}
                 <div className="border border-gray-300 rounded-md p-6">
                   <input
@@ -419,7 +423,7 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-gray-700">
               Order Details
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div>
                 <label className="block text-gray-600">
                   Quantity of USFRANC (USF) Ordered:
@@ -429,7 +433,7 @@ export default function Page() {
                   name="quantityOrdered"
                   value={formData.quantityOrdered}
                   onChange={handleQuantityChange}
-                  className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
@@ -442,7 +446,7 @@ export default function Page() {
                   name="totalAmount"
                   value={formData.totalAmount}
                   readOnly
-                  className="w-full p-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-logo"
+                  className="w-full mt-1 p-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-logo"
                   required
                 />
               </div>
@@ -472,16 +476,23 @@ export default function Page() {
             <h2 className="text-xl font-semibold text-gray-700">
               Buyer Acknowledgment
             </h2>
-            <p>
-              I confirm my order of USFRANC cryptocurrency and my intention to
-              transfer the full order amount in euros to the bank account
-              provided.
-              <br />
-              Upon receipt of payment, the corresponding USFRANC coins will be
-              delivered to your Trust Wallet address.
-              <br />
-              Please send your wallet address to usfranc@bobosohomail.com.
-            </p>
+
+            <div className="flex items-start gap-2">
+              <input
+                type="checkbox"
+                className="min-w-fit mt-1"
+                checked={isAcknowledged}
+                onChange={(e) => setIsAcknowledged(e.target.checked)}
+              />
+              <p>
+                I confirm my order of USFRANC cryptocurrency and my intention to
+                transfer the full order amount in euros to the bank account
+                provided.
+                <br />
+                Upon receipt of payment, the corresponding USFRANC coins will be
+                delivered to your Trust Wallet address.
+              </p>
+            </div>
 
             <div>
               <label className="block text-gray-600">Wallet Address:</label>
@@ -490,7 +501,8 @@ export default function Page() {
                 name="walletAddress"
                 value={formData.walletAddress}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
+                placeholder="Enter your wallet address here or send to usfranc@bobosohomail.com"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
                 required
               />
             </div>
@@ -508,7 +520,7 @@ export default function Page() {
               />
               <label
                 htmlFor="signatureInput"
-                className="inline-block px-6 py-2 bg-logo text-white font-semibold rounded-md cursor-pointer hover:bg-logo-dark"
+                className="inline-block mt-1 px-6 py-2 bg-logo text-white font-semibold rounded-md cursor-pointer hover:bg-logo-dark"
               >
                 Upload Signature
               </label>
@@ -526,7 +538,7 @@ export default function Page() {
                 name="date"
                 value={formData.date}
                 readOnly
-                className="w-full p-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-logo"
+                className="w-full mt-1 p-2 border border-gray-300 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-logo"
                 required
               />
             </div>
