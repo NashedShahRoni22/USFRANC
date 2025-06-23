@@ -15,11 +15,11 @@ const distributionPoints = [
   {
     title: "3. Distribution Schedule",
     content:
-      "Participants may receive up to 30% additional USF coins over a three-year period following the official launch of USFranc, subject to compliance and continued engagement. The release schedule is as follows:",
+      "Participants may receive up to 60% additional USF coins over a three-year period following the official launch of USFranc, subject to compliance and continued engagement. The release schedule is as follows:",
     list: [
-      "10% after 12 months",
-      "10% after 24 months",
-      "10% after 36 months",
+      "20% after 12 months",
+      "20% after 24 months",
+      "20% after 36 months",
     ],
   },
   {

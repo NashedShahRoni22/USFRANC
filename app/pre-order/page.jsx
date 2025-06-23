@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FiUpload, FiRefreshCw, FiCheckCircle, FiFile } from "react-icons/fi";
 import Container from "../components/shared/Container";
+import { FaSpinner } from "react-icons/fa";
 
 export default function Page() {
   const [formData, setFormData] = useState({
@@ -536,9 +537,13 @@ export default function Page() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="w-full sm:w-1/3 p-3 bg-logo text-white font-semibold rounded-md shadow-md hover:bg-logo-dark"
+              disabled={isSubmitting}
+              className="cursor-pointer w-full sm:w-1/3 p-3 bg-logo text-white font-semibold rounded-md shadow-md hover:bg-logo-dark flex items-center gap-2.5 justify-center"
             >
-              Confirm Order Now
+              Confirm Order Now 
+              {
+                isSubmitting && <FaSpinner className="animate-spin"/>
+              }
             </button>
           </div>
         </form>

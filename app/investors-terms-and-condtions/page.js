@@ -10,7 +10,7 @@ const termsPoints = [
   {
     title: "2. Deferred Utility Distribution",
     content:
-      "Participants may receive up to an additional 30% in USF through a Deferred Utility Distribution, issued as 10% allocations annually over three years (at 12, 24, and 36 months post-launch). This is not a guaranteed return and may be adjusted or withheld based on compliance, eligibility, and behavior aligned with the USFranc ecosystem.",
+      "Participants may receive up to an additional 60% in USF through a Deferred Utility Distribution, issued as 20% allocations annually over three years (at 12, 24, and 36 months post-launch). This is not a guaranteed return and may be adjusted or withheld based on compliance, eligibility, and behavior aligned with the USFranc ecosystem.",
   },
   {
     title: "3. Resale Conditions",
