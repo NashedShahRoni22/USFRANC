@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { FiUpload, FiRefreshCw, FiCheckCircle, FiFile } from "react-icons/fi";
+import { FiUpload, FiRefreshCw, FiCheckCircle } from "react-icons/fi";
 import Container from "../components/shared/Container";
 import { FaSpinner } from "react-icons/fa";
 
@@ -27,42 +26,6 @@ export default function Page() {
   const [signatureFile, setSignatureFile] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAcknowledged, setIsAcknowledged] = useState(false);
-
-  // Convert file to base64 for ImgBB
-  const convertToBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result.split(",")[1]);
-      reader.onerror = (error) => reject(error);
-    });
-  };
-
-  // Upload single image to ImgBB
-  const uploadToImgBB = async (file) => {
-    try {
-      const base64Image = await convertToBase64(file);
-      const formData = new FormData();
-      formData.append("key", "b213c81cd4bc99c48b54bb6be2144da2");
-      formData.append("image", base64Image);
-
-      const response = await fetch("https://api.imgbb.com/1/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        return result.data.url;
-      } else {
-        throw new Error("Image upload failed");
-      }
-    } catch (error) {
-      console.error("ImgBB upload error:", error);
-      throw error;
-    }
-  };
 
   const handleIdDocuments = (e, part) => {
     const file = e.target.files[0];
@@ -103,66 +66,53 @@ export default function Page() {
     try {
       setIsSubmitting(true);
 
-      // Step 1: Upload all images to ImgBB
-      console.log("Uploading images...");
-      const [frontIdUrl, backIdUrl, addressProofUrl, signatureUrl] =
-        await Promise.all([
-          uploadToImgBB(idDocuments.front),
-          uploadToImgBB(idDocuments.back),
-          uploadToImgBB(addressProof),
-          uploadToImgBB(signatureFile),
-        ]);
-
-      console.log("Images uploaded successfully");
-
-      // Step 2: Prepare email data with image URLs
-      const emailData = {
-        fullName: formData.fullName,
-        email: formData.email,
-        phoneNumber: formData.phoneNumber,
-        fullAddress: formData.fullAddress,
-        country: formData.country,
-        dob: formData.dob,
-        quantityOrdered: formData.quantityOrdered,
-        totalAmount: formData.totalAmount,
-        walletAddress: formData.walletAddress,
-        date: formData.date,
-        frontIdUrl: frontIdUrl,
-        backIdUrl: backIdUrl,
-        addressProofUrl: addressProofUrl,
-        signatureUrl: signatureUrl,
-        submissionDate: new Date().toISOString(),
-      };
-
-      // Step 3: Send email via EmailJS
-      console.log("Sending email...");
-      const result = await emailjs.send(
-        "service_iqqrtr1",
-        "template_nf4azqs",
-        emailData,
-        "ewm-4zeSsY4xNqiwh"
-      );
-
-      if (result.status === 200) {
-        alert("Form submitted successfully!");
-
-        // Reset form
-        setFormData({
-          fullName: "",
-          email: "",
-          phoneNumber: "",
-          fullAddress: "",
-          country: "",
-          dob: "",
-          quantityOrdered: "",
-          totalAmount: 0,
-          walletAddress: "",
-          date: new Date().toLocaleDateString(),
-        });
-        setIdDocuments({ front: null, back: null });
-        setAddressProof(null);
-        setSignatureFile(null);
+      // sumission data
+      const submissionData = new FormData();
+      submissionData.append("fullName", formData.fullName);
+      submissionData.append("email", formData.email);
+      submissionData.append("phoneNumber", formData.phoneNumber);
+      submissionData.append("fullAddress", formData.fullAddress);
+      submissionData.append("country", formData.country);
+      submissionData.append("dob", formData.dob);
+      submissionData.append("quantityOrdered", formData.quantityOrdered);
+      submissionData.append("totalAmount", formData.totalAmount);
+      submissionData.append("walletAddress", formData.walletAddress);
+      submissionData.append("idDocumentFront", idDocuments.front);
+      submissionData.append("idDocumentBack", idDocuments.back);
+      submissionData.append("signatureFile", signatureFile);
+      if (addressProof) {
+        submissionData.append("addressProof", addressProof);
       }
+
+      const res = await fetch("https://api.usfranc.com/order/submit.php", {
+        method: "POST",
+        body: submissionData,
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const result = await res.json();
+
+      alert("Form submitted successfully!");
+
+      setFormData({
+        fullName: "",
+        email: "",
+        phoneNumber: "",
+        fullAddress: "",
+        country: "",
+        dob: "",
+        quantityOrdered: "",
+        totalAmount: 0,
+        walletAddress: "",
+        date: new Date().toLocaleDateString(),
+      });
+      setIdDocuments({ front: null, back: null });
+      setAddressProof(null);
+      setSignatureFile(null);
+      setIsAcknowledged(false);
     } catch (error) {
       console.error("Submission error:", error);
       alert("Submission failed. Please try again.");
@@ -552,10 +502,8 @@ export default function Page() {
               disabled={isSubmitting}
               className="cursor-pointer w-full sm:w-1/3 p-3 bg-logo text-white font-semibold rounded-md shadow-md hover:bg-logo-dark flex items-center gap-2.5 justify-center"
             >
-              Confirm Order Now 
-              {
-                isSubmitting && <FaSpinner className="animate-spin"/>
-              }
+              Confirm Order Now
+              {isSubmitting && <FaSpinner className="animate-spin" />}
             </button>
           </div>
         </form>
