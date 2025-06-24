@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FiUpload, FiRefreshCw, FiCheckCircle } from "react-icons/fi";
 import Container from "../components/shared/Container";
 import { FaSpinner } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Page() {
   const [formData, setFormData] = useState({
@@ -29,7 +30,27 @@ export default function Page() {
 
   const handleIdDocuments = (e, part) => {
     const file = e.target.files[0];
-    setIdDocuments((prev) => ({ ...prev, [part]: file }));
+    if (file) {
+      setIdDocuments((prev) => ({ ...prev, [part]: file }));
+    }
+  };
+
+  // For address proof file upload
+  const handleAddressProof = (e) => {
+    const file = e.target.files[0];
+    // Only update if a file was actually selected
+    if (file) {
+      setAddressProof(file);
+    }
+  };
+
+  // For signature file upload
+  const handleSignatureFile = (e) => {
+    const file = e.target.files[0];
+    // Only update if a file was actually selected
+    if (file) {
+      setSignatureFile(file);
+    }
   };
 
   const handleChange = (e) => {
@@ -58,7 +79,12 @@ export default function Page() {
     }
 
     // Validation
-    if (!idDocuments.front || !idDocuments.back || !signatureFile) {
+    if (
+      !idDocuments.front ||
+      !idDocuments.back ||
+      !signatureFile ||
+      !addressProof
+    ) {
       alert("Please attach all necessary files.");
       return;
     }
@@ -76,12 +102,12 @@ export default function Page() {
       submissionData.append("dob", formData.dob);
       submissionData.append("quantityOrdered", formData.quantityOrdered);
       submissionData.append("totalAmount", formData.totalAmount);
-      submissionData.append("walletAddress", formData.walletAddress);
       submissionData.append("idDocumentFront", idDocuments.front);
       submissionData.append("idDocumentBack", idDocuments.back);
       submissionData.append("signatureFile", signatureFile);
-      if (addressProof) {
-        submissionData.append("addressProof", addressProof);
+      submissionData.append("addressProof", addressProof);
+      if (formData.walletAddress) {
+        submissionData.append("walletAddress", formData.walletAddress);
       }
 
       const res = await fetch("https://api.usfranc.com/order/submit.php", {
@@ -253,7 +279,7 @@ export default function Page() {
                           className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
                         >
                           <FiUpload className="mr-2 h-4 w-4" />
-                          Upload Front of ID
+                          Upload Signature Document
                         </label>
                         <p className="text-xs text-gray-500 mt-1">
                           PDF, JPG or PNG
@@ -316,16 +342,14 @@ export default function Page() {
 
           {/* Proof of Address */}
           <div>
-            <label className="block text-gray-600 mb-1">
-              Proof of Address (optional)
-            </label>
+            <label className="block text-gray-600 mb-1">Proof of Address</label>
             <div className="border border-gray-300 rounded-md p-6">
               <input
                 type="file"
                 name="addressProof"
                 id="addressProof"
                 className="hidden"
-                onChange={(e) => setAddressProof(e.target.files[0])}
+                onChange={handleAddressProof}
                 accept="image/*,.pdf"
               />
               <div className="flex flex-col items-center gap-3 text-center">
@@ -436,17 +460,34 @@ export default function Page() {
                 onChange={(e) => setIsAcknowledged(e.target.checked)}
               />
               <p>
-                I confirm my order of USFRANC cryptocurrency and my intention to
-                transfer the full order amount in euros to the bank account
-                provided.
-                <br />
-                Upon receipt of payment, the corresponding USFRANC coins will be
-                delivered to your Trust Wallet address.
+                I confirm my order of USFRANC cryptocurrency, that i have read
+                and accept{" "}
+                <Link
+                  href="/participation-terms-and-condtions"
+                  target="_blank"
+                  className="text-blue-600 underline"
+                >
+                  USF Terms & Conditions
+                </Link>{" "}
+                and the{" "}
+                <Link
+                  href="/policy"
+                  target="_blank"
+                  className="text-blue-600 underline"
+                >
+                  Privacy Policy
+                </Link>{" "}
+                and my intention to transfer the full order amount in Euros to
+                the Bank Account provided. Upon receipt of payment, the
+                corresponding USFRANC coins will be delivered to your Trust
+                Wallet address.
               </p>
             </div>
 
             <div>
-              <label className="block text-gray-600">Wallet Address:</label>
+              <label className="block text-gray-600">
+                Wallet Address (optional):
+              </label>
               <input
                 type="text"
                 name="walletAddress"
@@ -454,7 +495,6 @@ export default function Page() {
                 onChange={handleChange}
                 placeholder="Enter your wallet address here or send to usfranc@bobosohomail.com"
                 className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
-                required
               />
             </div>
 
@@ -462,24 +502,52 @@ export default function Page() {
               <label className="block text-gray-600 mb-1">
                 Signature Document:
               </label>
-              <input
-                type="file"
-                name="signatureFile"
-                id="signatureInput"
-                className="hidden"
-                onChange={(e) => setSignatureFile(e.target.files[0])}
-              />
-              <label
-                htmlFor="signatureInput"
-                className="inline-block mt-1 px-6 py-2 bg-logo text-white font-semibold rounded-md cursor-pointer hover:bg-logo-dark"
-              >
-                Upload Signature
-              </label>
-              {signatureFile && (
-                <span className="ml-4 text-sm font-medium text-logo">
-                  {signatureFile.name}
-                </span>
-              )}
+              <div className="border border-gray-300 rounded-md p-6">
+                <input
+                  type="file"
+                  name="signatureFile"
+                  id="signatureFile"
+                  className="hidden"
+                  onChange={handleSignatureFile}
+                  accept="image/*,.pdf"
+                />
+                <div className="flex flex-col items-center gap-3 text-center">
+                  {signatureFile ? (
+                    <>
+                      <div className="flex items-center gap-2">
+                        <FiCheckCircle className="h-5 w-5 text-green-500" />
+                        <span className="text-sm font-medium text-gray-700 truncate max-w-xs">
+                          {signatureFile.name}
+                        </span>
+                      </div>
+                      <label
+                        htmlFor="signatureFile"
+                        className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                      >
+                        <FiRefreshCw className="mr-2 h-4 w-4" />
+                        Change File
+                      </label>
+                      <p className="text-xs text-gray-500 mt-1">
+                        PDF, JPG or PNG
+                      </p>
+                    </>
+                  ) : (
+                    <>
+                      <FiUpload className="h-7 w-7 text-gray-400" />
+                      <label
+                        htmlFor="signatureFile"
+                        className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
+                      >
+                        <FiUpload className="mr-2 h-4 w-4" />
+                        Upload Front of ID
+                      </label>
+                      <p className="text-xs text-gray-500 mt-1">
+                        PDF, JPG or PNG
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
             </div>
 
             <div>
