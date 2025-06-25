@@ -279,7 +279,7 @@ export default function Page() {
                           className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
                         >
                           <FiUpload className="mr-2 h-4 w-4" />
-                          Upload Signature Document
+                          Upload Front of ID
                         </label>
                         <p className="text-xs text-gray-500 mt-1">
                           PDF, JPG or PNG
@@ -539,7 +539,7 @@ export default function Page() {
                         className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-logo cursor-pointer"
                       >
                         <FiUpload className="mr-2 h-4 w-4" />
-                        Upload Front of ID
+                        Upload Signed Signature
                       </label>
                       <p className="text-xs text-gray-500 mt-1">
                         PDF, JPG or PNG
