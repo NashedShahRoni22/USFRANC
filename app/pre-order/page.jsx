@@ -484,7 +484,7 @@ export default function Page() {
               </p>
             </div>
 
-            <div>
+            {/* <div>
               <label className="block text-gray-600">
                 Wallet Address (optional):
               </label>
@@ -496,7 +496,7 @@ export default function Page() {
                 placeholder="Enter your wallet address here or send to usfranc@bobosohomail.com"
                 className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-logo"
               />
-            </div>
+            </div> */}
 
             <div>
               <label className="block text-gray-600 mb-1">
@@ -582,8 +582,8 @@ export default function Page() {
         <ol className="list-decimal list-inside ml-5 mt-2.5">
           <li>Transfer your payment to the above account.</li>
           <li>
-            Once confirmed, we will: Credit your wallet with the correct amount
-            of wUSF Send it to your BNB-compatible wallet (Trust Wallet)
+            Once confirmed, we will credit your wallet with the selected amount of USF.
+            This will be sent to your BNB-compatible wallet.
           </li>
         </ol>
       </div>
