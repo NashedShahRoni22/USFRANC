@@ -13,7 +13,7 @@ const infoCards = [
   {
     title: "Pricing, Supply, and Hedging Model",
     points: [
-      "Launch price: €2.00 with a fixed supply of 115 million USF.",
+      "Launch price: €2.00 with a fixed supply of 115 million USFC.",
       "100 million coins hedged with 67% in low-risk government bonds.",
       "10M allocated to investors at a 3x return ratio.",
       "5M reserved for founders as compensation (Brian Fin: 2M, Affin: 3M).",
@@ -34,7 +34,7 @@ const infoCards = [
       "Peer-to-peer global payments without intermediaries.",
       "Store of value with conversion to stablecoins or crypto.",
       "Smart escrow payment system with 7-day return window.",
-      "Recipients can hold, spend, or convert USF freely.",
+      "Recipients can hold, spend, or convert USFC freely.",
     ],
   },
 ];
@@ -56,7 +56,7 @@ export default function USFRANCWhitePaper() {
     <Container>
       {/* Page Title */}
       <h1 className="text-3xl font-bold mb-6 text-center mt-8 md:mt-16">
-        USFRANC (USF) – White Paper
+        USFRANC (USFC) – White Paper
       </h1>
 
       {/* Comparison Table */}

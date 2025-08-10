@@ -5,7 +5,7 @@ const privateSalePoints = [
   {
     title: "1. Immediate Delivery",
     list: [
-      "100% of purchased USF coins are sent to the investor wallet at the time of purchase.",
+      "100% of purchased USFC coins are sent to the investor wallet at the time of purchase.",
     ],
   },
   {

@@ -10,12 +10,12 @@ const distributionPoints = [
   {
     title: "2. Eligibility",
     content:
-      "All participants who purchase USFranc (USF) coins during the official pre-launch phase and comply with the applicable participation terms may be eligible for a Deferred Utility Distribution.",
+      "All participants who purchase USFranc (USFC) coins during the official pre-launch phase and comply with the applicable participation terms may be eligible for a Deferred Utility Distribution.",
   },
   {
     title: "3. Distribution Schedule",
     content:
-      "Participants may receive up to 60% additional USF coins over a three-year period following the official launch of USFranc, subject to compliance and continued engagement. The release schedule is as follows:",
+      "Participants may receive up to 60% additional USFC coins over a three-year period following the official launch of USFranc, subject to compliance and continued engagement. The release schedule is as follows:",
     list: [
       "20% after 12 months",
       "20% after 24 months",
@@ -30,7 +30,7 @@ const distributionPoints = [
   {
     title: "5. Resale Limitations",
     content:
-      "To protect price integrity, participants may not sell more than one-third (1/3) of their original USF purchase per year, starting from the second year post-launch. This condition does not apply to Deferred Utility Distributions.",
+      "To protect price integrity, participants may not sell more than one-third (1/3) of their original USFC purchase per year, starting from the second year post-launch. This condition does not apply to Deferred Utility Distributions.",
   },
   {
     title: "6. Legal & Regulatory Position",

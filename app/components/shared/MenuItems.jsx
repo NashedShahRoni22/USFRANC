@@ -16,15 +16,15 @@ export const MenuItems = [
     icon: <FaInfoCircle />,
     child: [
       {
-        title: "Learn USF",
+        title: "Learn USFC",
         path: "/about",
       },
       {
-        title: "What is USF and What not?",
+        title: "What is USFC and What not?",
         path: "/difference",
       },
       {
-        title: "USF Peer to Peer Transfer Fees",
+        title: "USFC Peer to Peer Transfer Fees",
         path: "/usf-peer-to-peer-transfer-fees",
       },
       {
@@ -94,7 +94,7 @@ export const MenuItems = [
     ],
   },
   {
-    title: "Get USF", path: "/buy", icon: <FaShoppingCart />, 
+    title: "Get USFC", path: "/buy", icon: <FaShoppingCart />, 
     child: [
       {
         title: "Private Sale",

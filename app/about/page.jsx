@@ -6,7 +6,7 @@ const sections = [
   {
     title: "Crypto Coins Purpose",
     list: [
-      "Paying for goods and services with USF",
+      "Paying for goods and services with USFC",
       "Holding in your non-custodial wallet",
       "Converting to other crypto assets for merchant settlement",
     ],
@@ -29,13 +29,13 @@ const sections = [
   {
     title: "Buyback Guarantee (Limited)",
     content: [
-      "A €0.40 buyback guarantee is offered during the first issuance period if the price drops below €0.50, valid for 60 days from launch. A reduced 20% buyback option applies in secondary issuance rounds under certain conditions.",
+      "A €0.30 buyback guarantee is offered during the first issuance period if the price drops below €0.20, valid for 60 days from launch. A reduced 20% buyback option applies in secondary issuance rounds under certain conditions.",
     ],
   },
   {
     title: "Supply & Distribution",
     content: [
-      "USFRANC will issue 100 million crypto coins in total, released in batches of 10 million. Each batch corresponds to a new issuance round and is governed by transparent economic policies.",
+      "USFRANC will issue 1 billion crypto coins in total, released in batches of 50 million. Each batch corresponds to a new issuance round and is governed by transparent economic policies.",
     ],
   },
   {
@@ -48,9 +48,9 @@ const sections = [
   {
     title: "Crypto Coin Snapshot",
     list: [
-      "Crypto Coin price: €2.00 at launch",
-      "Max Supply: 115 million (released in 10M phases)",
-      "Consensus: Hybrid Proof of Work + Proof of Stake and capital hedge policy 67% of First sales retained in USF government bond Investments",
+      "Crypto Coin price: €0.50 at launch which will alligned to demand and supply",
+      "Max Supply: 1 billion (released in 50M phases)",
+      "Consensus: Hybrid Proof of Work + Proof of Stake and capital hedge policy 67% of First sales retained in USFC government bond Investments",
     ],
   },
 ];
@@ -70,7 +70,7 @@ export default function Page() {
             What is USFRANC?
           </h2>
           <p className="mt-4 md:text-xl">
-            USFRANC (USF) is a capital-backed utility crypto coins designed for
+            USFRANC (USFC) is a capital-backed utility crypto coins designed for
             secure, real-world payments — both online and in-store. It enables
             blockchain-based commerce through a transparent, non-custodial
             wallet and smart contract model.

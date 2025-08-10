@@ -37,7 +37,7 @@ export default function Page() {
   {
     title: "4. User Rights and Network Protection",
     items: [
-      "USFranc ensures that legitimate buyers and holders retain full rights to buy, hold, exchange, or store USF within lawful use.",
+      "USFranc ensures that legitimate buyers and holders retain full rights to buy, hold, exchange, or store USFC within lawful use.",
       "Transactions are never censored or reversed, except where they result from verified fraud, breach, or security violations.",
       "The PoW/PoS validation system ensures decentralization, while the compliance framework protects the network and its users from misuse.",
     ],

@@ -42,22 +42,22 @@ export default function WhatIsWhatNot() {
     {
       title: "Peer-to-Peer Transfers",
       description:
-        "Send USF instantly between wallets across borders — fast, secure, and decentralized.",
+        "Send USFC instantly between wallets across borders — fast, secure, and decentralized.",
     },
     {
       title: "Store of Value with Flexibility",
       description:
-        "Hold USF securely in your wallet. Swap into other cryptocurrencies when needed.",
+        "Hold USFC securely in your wallet. Swap into other cryptocurrencies when needed.",
     },
     {
       title: "Merchant Payments with Escrow",
       description:
-        "Pay for goods using USF. Merchants who opt in receive funds after delivery and a 7-day return window.",
+        "Pay for goods using USFC. Merchants who opt in receive funds after delivery and a 7-day return window.",
     },
     {
       title: "Flexible Recipient Usage",
       description:
-        "Recipients can hold, convert, resell, or spend USF depending on local crypto laws.",
+        "Recipients can hold, convert, resell, or spend USFC depending on local crypto laws.",
     },
   ];
 

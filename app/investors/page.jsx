@@ -12,7 +12,7 @@ const investorSections = [
       "No guaranteed return or yield",
     ],
     content: [
-      "Early participants may receive USF crypto coins allocated over a three-year vesting schedule in exchange for their capital contribution.",
+      "Early participants may receive USFC crypto coins allocated over a three-year vesting schedule in exchange for their capital contribution.",
     ],
   },
   {
@@ -71,20 +71,20 @@ const reasonsToInvest = [
     title: "2. Dual Consensus Model – PoW + PoS",
     content: [
       "USFRANC uses a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) system, combining the security and decentralization of PoW with the energy efficiency and scalability of PoS.",
-      "This dual validation system enhances the security and reliability of USF.",
+      "This dual validation system enhances the security and reliability of USFC.",
     ],
   },
   {
     title: "3. Long-Term Growth Potential",
     content: [
-      "USFRANC is positioned for long-term adoption, and our fixed issuance model (115 million USF) ensures that there is no inflationary risk.",
-      "We’ve designed USF as a store of value and a useful asset for payments, with guaranteed buyback options to protect investors.",
+      "USFRANC is positioned for long-term adoption, and our fixed issuance model (115 million USFC) ensures that there is no inflationary risk.",
+      "We’ve designed USFC as a store of value and a useful asset for payments, with guaranteed buyback options to protect investors.",
     ],
   },
   {
     title: "4. Clear Utility with Real-World Use Cases",
     content: [
-      "Unlike many speculative coins, USFRANC is built with clear utility. USF can be used for:",
+      "Unlike many speculative coins, USFRANC is built with clear utility. USFC can be used for:",
     ],
     list: [
       "Peer-to-peer transfers",
@@ -96,14 +96,14 @@ const reasonsToInvest = [
     title: "5. Early Investor Advantage",
     content: [
       "Investing in USFRANC early gives you a first-mover advantage.",
-      "With limited access to 10 million USF coins at a favorable 3x return ratio, early investors have the chance to benefit as USF grows in value.",
+      "With limited access to 10 million USFC coins at a favorable 3x return ratio, early investors have the chance to benefit as USFC grows in value.",
     ],
   },
   {
     title: "6. Fully Decentralized and Community Governed",
     content: [
       "USFRANC is decentralized, meaning no central authority controls the currency.",
-      "With community governance, decisions about USF’s future will be made collectively, ensuring transparency and fairness.",
+      "With community governance, decisions about USFC’s future will be made collectively, ensuring transparency and fairness.",
     ],
   },
   {
@@ -122,26 +122,26 @@ const reasonsToInvest = [
 
 const investContent = {
   introHeading:
-    "Invest in USFRANC (USF) – A Cryptocurrency Built for Stability and Growth!",
+    "Invest in USFRANC (USFC) – A Cryptocurrency Built for Stability and Growth!",
   subHeading: "Join the Future of Digital Currency",
   introParagraph:
-    "USFRANC (USF) is a next-generation cryptocurrency built on a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) blockchain, designed for long-term stability, transparency, and massive growth potential. USF offers a unique guaranteed hedge, backed by 67% of its first sales in low-risk government bonds, ensuring your investment’s stability from the start.",
+    "USFRANC (USFC) is a next-generation cryptocurrency built on a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) blockchain, designed for long-term stability, transparency, and massive growth potential. USFC offers a unique guaranteed hedge, backed by 67% of its first sales in low-risk government bonds, ensuring your investment’s stability from the start.",
   sections: [
     {
       title: "Why Invest in USFRANC?",
       points: [
         "Guaranteed Hedge: 67% of first sales invested into low-risk government bonds",
         "Dual Consensus Model: Using the power of both PoW and PoS for robust security",
-        "Utility-Driven: USF can be used for peer-to-peer transfers, merchant payments with escrow, and as a store of value",
-        "Attractive Investor Offering: Get in early with 3x return ratio for investors — 10 million USF coins allocated to investors at the initial sale",
+        "Utility-Driven: USFC can be used for peer-to-peer transfers, merchant payments with escrow, and as a store of value",
+        "Attractive Investor Offering: Get in early with 3x return ratio for investors — 10 million USFC coins allocated to investors at the initial sale",
         "Secured and Transparent: USFRANC is a decentralized and compliant cryptocurrency, designed to grow in line with market demand and regulatory frameworks",
       ],
     },
     {
       title: "Invest with Confidence:",
       points: [
-        "Preliminary Price: €2.00 per USF (Buyback guarantee at €0.40 if the price falls below €0.50)",
-        "Exclusive Early Investment Opportunity: Join the first sale for limited access to USF coins",
+        "Preliminary Price: €2.00 per USFC (Buyback guarantee at €0.40 if the price falls below €0.50)",
+        "Exclusive Early Investment Opportunity: Join the first sale for limited access to USFC coins",
         "Blockchain for Everyone: A transparent and secure platform for users and investors alike",
       ],
     },
@@ -224,9 +224,9 @@ export default function Page() {
         <p className="text-2xl">Reach us directly at: usfranc@bobosohomail.com</p>
       </div>
 
-      {/* Why Invest in USFRANC (USF)? */}
+      {/* Why Invest in USFRANC (USFC)? */}
       <h1 className="text-3xl font-bold mb-6 mt-8 md:mt-16 text-center">
-        Why Invest in USFRANC (USF)?
+        Why Invest in USFRANC (USFC)?
       </h1>
       <div className="grid gap-4 sm:grid-cols-2">
         {reasonsToInvest.map((reason, index) => (
@@ -249,7 +249,7 @@ export default function Page() {
         ))}
       </div>
 
-      {/* Invest in USFRANC (USF) – A Cryptocurrency Built for Stability and Growth!, */}
+      {/* Invest in USFRANC (USFC) – A Cryptocurrency Built for Stability and Growth!, */}
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 mt-8">
         {investContent.introHeading}
       </h2>

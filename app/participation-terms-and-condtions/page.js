@@ -5,7 +5,7 @@ const privateSaleTnCPoints = [
   {
     title: "1. Participation and Delivery",
     content:
-      "Participants will receive 100% of their purchased USF coins directly to their wallet upon completion of the transaction.",
+      "Participants will receive 100% of their purchased USFC coins directly to their wallet upon completion of the transaction.",
   },
   {
     title: "2. Deferred Utility Distribution",
@@ -47,7 +47,7 @@ export default function PrivateSaleTnCPage() {
         </div>
 
         <p className="mb-6">
-          These Terms and Conditions apply to all participants in the USFranc Private Sale and establish the framework for distribution, use, and resale of USFranc (USF) coins.
+          These Terms and Conditions apply to all participants in the USFranc Private Sale and establish the framework for distribution, use, and resale of USFranc (USFC) coins.
         </p>
 
         {privateSaleTnCPoints.map((point, idx) => (

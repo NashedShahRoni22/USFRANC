@@ -7,12 +7,12 @@ export default function HighlightsTwo() {
     const data = [
         {
             title: "USFRANC OWN CAPITAL HEDGE FUND",
-            desc: "USFRANC OWN CAPITAL HEDGE FUND A portion (67%) of all First sales by USF to a crypto Buyer is securely invested into low-risk reserves ( gov bonds or simular Investments ), this capital is entirely the financial property of USFRANC, its hedging purpose is to ensure trust, stability for USF users.",
+            desc: "USFRANC OWN CAPITAL HEDGE FUND A portion (67%) of all First sales by USFC to a crypto Buyer is securely invested into low-risk reserves ( gov bonds or simular Investments ), this capital is entirely the financial property of USFRANC, its hedging purpose is to ensure trust, stability for USFC users.",
             icon: <FaShieldAlt />,
         },
         {
             title: "Wallet-Based Escrow Security",
-            desc: "Funds are securely held in a wallet-based escrow, protecting both buyers and merchants by ensuring safe and verified transactions. Note Merchants must opte in to USF wallet. USF can be paid to any wallet by crypto holder.",
+            desc: "Funds are securely held in a wallet-based escrow, protecting both buyers and merchants by ensuring safe and verified transactions. Note Merchants must opte in to USFC wallet. USFC can be paid to any wallet by crypto holder.",
             icon: <FaWallet />,
         },
         // {

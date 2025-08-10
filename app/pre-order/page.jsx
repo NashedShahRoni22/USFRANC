@@ -66,7 +66,7 @@ export default function Page() {
     setFormData((prev) => ({
       ...prev,
       quantityOrdered: quantity,
-      totalAmount: quantity * 2,
+      totalAmount: quantity * 0.5,
     }));
   };
 
@@ -401,7 +401,7 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div>
                 <label className="block text-gray-600">
-                  Quantity of USFRANC (USF) Ordered:
+                  Quantity of USFRANC (USFC) Ordered:
                 </label>
                 <input
                   type="number"
@@ -467,7 +467,7 @@ export default function Page() {
                   target="_blank"
                   className="text-blue-600 underline"
                 >
-                  USF Terms & Conditions
+                  USFC Terms & Conditions
                 </Link>{" "}
                 and the{" "}
                 <Link
@@ -479,8 +479,7 @@ export default function Page() {
                 </Link>{" "}
                 and my intention to transfer the full order amount in Euros to
                 the Bank Account provided. Upon receipt of payment, the
-                corresponding USFRANC coins will be delivered to your Trust
-                Wallet address.
+                corresponding USFRANC coins will be delivered to your choosen crypto wallet address which we will contact you on received of your payment.
               </p>
             </div>
 
@@ -582,7 +581,7 @@ export default function Page() {
         <ol className="list-decimal list-inside ml-5 mt-2.5">
           <li>Transfer your payment to the above account.</li>
           <li>
-            Once confirmed, we will credit your wallet with the selected amount of USF.
+            Once confirmed, we will credit your wallet with the selected amount of USFC.
             This will be sent to your BNB-compatible wallet.
           </li>
         </ol>

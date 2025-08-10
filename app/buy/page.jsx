@@ -30,7 +30,7 @@ export default function page() {
               href="/pre-order"
               className="inline-block px-6 py-3 bg-logo text-white font-semibold text-lg rounded hover:opacity-90 transition"
             >
-              Get USF Now
+              Get USFC Now
             </Link>
             <p className="mt-4 text-sm">
               Private Sale Limited Supply — Secure Your Share Today
@@ -64,7 +64,7 @@ export default function page() {
             href="/pre-order"
             className="inline-block px-6 py-3 bg-logo text-white font-semibold text-lg rounded hover:opacity-90 transition"
           >
-            Get USF Now
+            Get USFC Now
           </Link>
         </div>
       </section>

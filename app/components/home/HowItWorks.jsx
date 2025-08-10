@@ -21,7 +21,7 @@ export default function HowItWorks() {
       title: "Merchant Reliability",
       icon: <RiRefund2Fill />,
       list: [
-        "Merchants agree to hold payments in their USF wallet until delivery is fulfilled.",
+        "Merchants agree to hold payments in their USFC wallet until delivery is fulfilled.",
         "This builds trust and enhances their reputation for future transactions.",
       ],
     },
@@ -45,7 +45,7 @@ export default function HowItWorks() {
         />
         {/* Flow Steps */}
         {/* <h5 className="mt-8 md:mt-16 font-semibold text-3xl md:text-4xl text-center">
-          How USF secures your purchase payments?
+          How USFC secures your purchase payments?
         </h5> */}
         <div className="mt-4 md:mt-8 flex flex-col lg:flex-row justify-center items-center gap-8  relative z-0">
           {data.map((item, index) => (

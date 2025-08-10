@@ -7,9 +7,9 @@ const whitePaperSectionsEN = [
     title: "2. Coin Overview",
     list: [
       "Coin Name: USFranc",
-      "Ticker Symbol: USFRC (public-facing name: USF)",
-      "Fractional Units: 1 USFranc = 100 Franqs",
-      "Total Supply: 115,000,000 USF (11.5 billion Franqs)",
+      "Ticker Symbol: USFC (public-facing name: USFC)",
+      "Fractional Units: 1 USFC = 100,000,000 Franqs",
+      "Total Supply: 1,000,000,000 USFC",
       "Native Chain: USFranc Hybrid Blockchain (PoW/PoS)",
       "Wrapped Version: BEP-20 Token (Binance Smart Chain-compatible)"
     ],
@@ -45,15 +45,15 @@ const whitePaperSectionsEN = [
   },
   {
     title: "6. Coin Distribution and Lock Policy",
-    content: "Of the total 115 million USF:",
+    content: "Of the total 1 billion USFC:",
     list: [
-      "100 million USF will be sold to the public and institutional partners",
-      "10 million USF reserved for private investors (see lock terms below)",
-      "5 million USF allocated to Founders and Co-Founders (non-sellable for 1 year)"
+      "900 million USFC will be sold to the public and institutional partners",
+      "50 million USFC reserved for private investors (see lock terms below)",
+      "50 million USFC allocated to Founders and Co-Founders (non-sellable for 1 year)"
     ],
     subsections: [
       {
-        subtitle: "Private Investor Lock and Bonus Program (10M USF):",
+        subtitle: "Private Investor Lock and Bonus Program (50M USFC):",
         list: [
           "Year 1: 0% sell allowed, +10% bonus added",
           "Year 2: Sell up to 33% of holdings, +10% bonus added",
@@ -161,7 +161,7 @@ const whitePaperSectionsEN = [
     ]
   },
   {
-    title: "13. Advantages of USF Peer-to-Peer Transfer Fees",
+    title: "13. Advantages of USFC Peer-to-Peer Transfer Fees",
     content: "USFranc's peer-to-peer transfer system is designed with clarity, transparency, and operational sustainability. The 2% transaction fee collected after the coin launch is distributed as follows:",
     list: [
       "10% to the Capital Hedge Fund, ensuring continuity in sovereign bond investments",
@@ -186,7 +186,7 @@ const whitePaperSectionsEN = [
     list: [
       "Coin Ownership: Buyers of USFranc obtain ownership of a decentralized cryptocurrency that is neither a security nor a stablecoin.",
       "Use Case Limitation: USFranc may be used for payments, storage, exchange, and participation in the native ecosystem. It does not grant voting rights unless otherwise announced.",
-      "Transferability: USF coins are freely transferable between non-custodial wallets, subject to 2% admin fee rules.",
+      "Transferability: USFC coins are freely transferable between non-custodial wallets, subject to 2% admin fee rules.",
       "Regulatory Clarity: All transactions and communications are subject to compliance with AML, CTF, and local jurisdiction laws. USFranc is positioned as a utility coin with a reserve-backing model, not as an investment security.",
       "Non-Refund Clause: As per the decentralized structure, all transactions are final unless fraud or AML violations are proven.",
       "Jurisdiction: Initial regulatory oversight lies with French commercial authorities (via SAS Affin) and UK financial compliance (via USFranc Ltd)."
@@ -207,22 +207,22 @@ const whitePaperSectionsEN = [
     ]
   },
   {
-    title: "18. Technical Identity of USF",
-    content: "USFranc (USF) is a native hybrid cryptocurrency with a dual-format deployment:",
+    title: "18. Technical Identity of USFC",
+    content: "USFranc (USFC) is a native hybrid cryptocurrency with a dual-format deployment:",
     list: [
-      "Native Coin: USF is not an ERC-20 or TRC-20 token. It is built on its own custom blockchain infrastructure using Komodo and Litecoin components.",
+      "Native Coin: USFC is not an ERC-20 or TRC-20 token. It is built on its own custom blockchain infrastructure using Komodo and Litecoin components.",
       "Consensus: Combines Proof of Work (PoW) and Proof of Stake (PoS)",
       "Mainnet Chain: Native chain using Komodo's SmartChain framework and Litecoin-compatible PoW mining"
     ]
   },
   {
     title: "19. Wrapped Token Version",
-    content: "wUSF: A BEP-20 token version (Wrapped USFranc) created for compatibility with Binance Smart Chain wallets such as Trust Wallet and MetaMask. wUSF is pegged 1:1 to the native USF and issued by the USFranc Reserve Management Entity for liquidity and user access.",
+    content: "wUSF: A BEP-20 token version (Wrapped USFranc) created for compatibility with Binance Smart Chain wallets such as Trust Wallet and MetaMask. wUSF is pegged 1:1 to the native USFC and issued by the USFranc Reserve Management Entity for liquidity and user access.",
     subsections: [
       {
         subtitle: "Summary Table:",
         table: {
-          headers: ["Feature", "Native USF Coin", "Wrapped wUSF Token (BEP-20)"],
+          headers: ["Feature", "Native USFC Coin", "Wrapped wUSF Token (BEP-20)"],
           rows: [
             ["Blockchain", "USFranc Hybrid Chain", "Binance Smart Chain"],
             ["Standard", "Native (no token standard)", "BEP-20"],
@@ -241,7 +241,7 @@ const whitePaperSectionsEN = [
       "PoW Base: Derived from Litecoin with Komodo integration",
       "Mining Authorization: Mining will be open but monitored. The USFranc network may apply node authorization and IP-based limitations to control participation.",
       "No Reward Dilution: Mining rewards are algorithmically fixed and distributed only to verified mining addresses.",
-      "Supply Integrity: A maximum supply cap of 115,000,000 USF is enforced. No new coins beyond this issuance.",
+      "Supply Integrity: A maximum supply cap of 1,000,000,000 USFC is enforced. No new coins beyond this issuance.",
       "Admin Monitoring: A compliance node will verify large transactions and trace transaction origin to prevent manipulation or fraud."
     ],
     note: "Mining is designed to ensure security, fairness, and protection against centralization, while remaining open to institutional and retail miners under transparent compliance terms."
@@ -269,10 +269,10 @@ const whitePaperSectionsEN = [
     title: "23. Why USFranc Stands Apart",
     list: [
       "🔐 Resilient Hybrid Blockchain: Litecoin + Komodo for scalable, efficient, and secure consensus",
-      "💶 Capital-Backed Value: 67% of first sales invested in government bonds and sovereign-aligned projects",
+      "💶 Capital-Backed Value: 67% of first sales invested in government bonds and sovereign-aligned projects. After the first sale of all coins the hedge fund will equal 670 million.",
       "🤝 Voluntary Escrow for Trust: Merchants and users can opt into a 7-day escrow, building transparency and confidence",
       "🧾 Regulatory-Focused: Full AML, CTF, and reserve oversight with mirrored ledger and node-level transaction monitoring",
-      "🪙 Limited, Fully Issued Supply: Max supply capped at 115M USF --- no inflation, no re-minting risk"
+      "🪙 Limited, Fully Issued Supply: Max supply capped at 1 Billion USFC - no inflation, no re-minting risk"
     ]
   },
   {

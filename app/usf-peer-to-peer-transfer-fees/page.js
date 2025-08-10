@@ -4,7 +4,7 @@ import heroImg from "../assets/peer-to-peer-transfer.png";
 
 const usfAdvantages = [
   {
-    title: "USF Transection Fees",
+    title: "USFC Transection Fees",
     points: [
       "A 2% admin fee is applied to peer-to-peer transactions.",
       "Collected fees are allocated to operational reserves and long-term hedge capital.",
@@ -14,7 +14,7 @@ const usfAdvantages = [
     title: "Ecosystem Sustainability",
     points: [
       "The 2% fee funds essential operations without relying on outside financing.",
-      "Keeps the USF ecosystem independent and self-sustaining.",
+      "Keeps the USFC ecosystem independent and self-sustaining.",
     ],
   },
   {
@@ -42,7 +42,7 @@ const usfAdvantages = [
     title: "Supports Future Development",
     points: [
       "Helps fund technical upgrades, compliance, and service improvements.",
-      "Ensures USF remains secure, efficient, and regulatory-compliant.",
+      "Ensures USFC remains secure, efficient, and regulatory-compliant.",
     ],
   },
 ];
@@ -53,7 +53,7 @@ export default function page() {
       <div className="flex items-center py-10 md:py-20 justify-between flex-col md:flex-row gap-8 md:gap-16">
         <div className="w-full md:w-1/2">
           <h2 className="text-xl md:text-3xl font-bold">
-            Advantages of USF Peer-to-Peer Transfer Fees
+            Advantages of USFC Peer-to-Peer Transfer Fees
           </h2>
           {usfAdvantages.map((advantage, index) => (
             <div key={index}>

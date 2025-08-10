@@ -3,7 +3,7 @@ export default function EnglishPage() {
     {
       title: "Introduction",
       content:
-        "USFRANC (USF) is a decentralized cryptocurrency coin designed for worldwide use as a payment instrument. Built on a hybrid Proof of Work (PoW) and Proof of Stake (PoS) blockchain, USFRANC facilitates secure and transparent transactions across a wide range of jurisdictions and markets.\n\nUSFRANC is not a stablecoin, not a security, and does not offer any investment return or income rights. Its primary use is as a utility cryptocurrency for payments.",
+        "USFRANC (USFC) is a decentralized cryptocurrency coin designed for worldwide use as a payment instrument. Built on a hybrid Proof of Work (PoW) and Proof of Stake (PoS) blockchain, USFRANC facilitates secure and transparent transactions across a wide range of jurisdictions and markets.\n\nUSFRANC is not a stablecoin, not a security, and does not offer any investment return or income rights. Its primary use is as a utility cryptocurrency for payments.",
     },
     {
       title: "Global Use and Local Responsibility",

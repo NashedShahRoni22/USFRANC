@@ -104,9 +104,9 @@ export default function Page() {
           </h3>
           <ul className="list-disc list-inside space-y-1">
             <li>
-              Only sovereign issuers from the Eurozone, US, UK, or Switzerland.
+              Only sovereign issuers from the Eurozone, US, UK, where the coin is prominently build.
             </li>
-            <li>All holdings denominated in EUR, USD, or CHF.</li>
+            <li>All holdings denominated in EUR and USD</li>
             <li>
               No corporate bonds, equities, cryptocurrencies, derivatives, or
               speculative assets.
@@ -142,7 +142,7 @@ export default function Page() {
               Mitigating Liquidity Risk by holding 50% in short-term and cash
               instruments.
             </li>
-            <li>Currency Risk by limiting to EUR, USD, and CHF instruments.</li>
+            <li>Currency Risk by limiting to EUR and USD instruments.</li>
           </ul>
         </section>
 

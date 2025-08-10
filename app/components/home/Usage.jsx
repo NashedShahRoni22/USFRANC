@@ -7,13 +7,13 @@ export default function Usage() {
     {
       title: "Online Spending",
       description:
-        "Make purchases with USF at online merchants accepting the cryptocurrency.",
+        "Make purchases with USFC at online merchants accepting the cryptocurrency.",
       color: "text-blue-500",
     },
     {
       title: "Store of Value",
       description:
-        "Buy and hold USF as a store of value, exchanging to other crypto when desired.",
+        "Buy and hold USFC as a store of value, exchanging to other crypto when desired.",
       color: "text-green-500",
     },
     {
@@ -25,7 +25,7 @@ export default function Usage() {
     {
       title: "Money Transfer",
       description:
-        "Transact USF to other users for delivery globally and for withdrawal to traditional currency.",
+        "Transact USFC to other users for delivery globally and for withdrawal to traditional currency.",
       color: "text-red-500",
     },
   ];
@@ -39,7 +39,7 @@ export default function Usage() {
             Built for Trust, Powered by Purpose
           </h1>
           <p className="text-[20px] font-semibold mt-8 text-logo">
-            Recommended Usage of USF (Usage may differ according to crypto
+            Recommended Usage of USFC (Usage may differ according to crypto
             users’ country regulations. Apply the appropriate use for your
             purpose).
           </p>

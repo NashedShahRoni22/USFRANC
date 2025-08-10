@@ -5,17 +5,17 @@ const termsPoints = [
   {
     title: "1. Coin Delivery",
     content:
-      "All participants will receive 100% of their purchased USFranc (USF) coins directly to their designated wallet address immediately upon completion of their pre-launch purchase.",
+      "All participants will receive 100% of their purchased USFranc (USFC) coins directly to their designated wallet address immediately upon completion of their pre-launch purchase.",
   },
   {
     title: "2. Deferred Utility Distribution",
     content:
-      "Participants may receive up to an additional 60% in USF through a Deferred Utility Distribution, issued as 20% allocations annually over three years (at 12, 24, and 36 months post-launch). This is not a guaranteed return and may be adjusted or withheld based on compliance, eligibility, and behavior aligned with the USFranc ecosystem.",
+      "Participants may receive up to an additional 60% in USFC through a Deferred Utility Distribution, issued as 20% allocations annually over three years (at 12, 24, and 36 months post-launch). This is not a guaranteed return and may be adjusted or withheld based on compliance, eligibility, and behavior aligned with the USFranc ecosystem.",
   },
   {
     title: "3. Resale Conditions",
     content:
-      "Participants agree not to resell more than one-third (1/3) of their originally purchased USF coins per year starting from the second year post-launch. This limitation supports price stability and responsible usage.",
+      "Participants agree not to resell more than one-third (1/3) of their originally purchased USFC coins per year starting from the second year post-launch. This limitation supports price stability and responsible usage.",
   },
   {
     title: "4. Regulatory & Legal Notice",

@@ -5,13 +5,13 @@ const sections = [
   {
     title: "Introduction",
     content:
-      "At USFRANC (USF), we are committed to safeguarding your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our website, platforms, and services related to USFRANC. USFRANC is a decentralized cryptocurrency (coin) built on a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) blockchain model. We aim to provide our users with a transparent, secure, and private experience. By using USFRANC and its related services, you agree to the collection and processing of your information in accordance with this Privacy Policy.",
+      "At USFRANC (USFC), we are committed to safeguarding your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our website, platforms, and services related to USFRANC. USFRANC is a decentralized cryptocurrency (coin) built on a hybrid Proof-of-Work (PoW) and Proof-of-Stake (PoS) blockchain model. We aim to provide our users with a transparent, secure, and private experience. By using USFRANC and its related services, you agree to the collection and processing of your information in accordance with this Privacy Policy.",
   },
   {
     title: "1. Information We Collect",
     list: [
       "Account Information: When you create an account to interact with USFRANC, we collect basic information, including your name, email address, and other necessary contact details.",
-      "Transaction Data: We collect details of your transactions on the USFRANC network, including sending, receiving, and storing USF.",
+      "Transaction Data: We collect details of your transactions on the USFRANC network, including sending, receiving, and storing USFC.",
       "Device and Usage Data: We collect technical data, such as your device’s IP address, browser type, operating system, and information related to your activity on the platform.",
       "Wallet Information: USFRANC is a non-custodial wallet system. Therefore, we do not store your private keys but may collect public wallet addresses for transaction purposes.",
     ],
@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
     <Container>
       <div className="py-12 px-4">
         <h1 className="text-3xl font-bold text-center text-logo mb-4">
-          Privacy Policy for USFRANC (USF)
+          Privacy Policy for USFRANC (USFC)
         </h1>
         <p className="text-center text-sm text-gray-500 mb-8">
           Effective Date: [Insert Date] &nbsp; | &nbsp; Last Revised: [Insert Date]

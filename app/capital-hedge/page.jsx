@@ -24,6 +24,12 @@ const content = [
     ],
   },
   {
+    title: "Capital Hedge Fund Value",
+    body: [
+      "Estimated value of capital hedge fund coin price of 0.5 will be 350 million after the first sale of all coins. This could increasse to 670 million if the coin value increases to 1 euro",
+    ],
+  },
+  {
     title: "Investment Framework",
     body: [
       "The reserve will be invested as follows:",
