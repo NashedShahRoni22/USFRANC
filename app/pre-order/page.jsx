@@ -6,6 +6,11 @@ import { FaSpinner } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Page() {
+  const [selectedType, setSelectedType] = useState("");
+  const handleTypeChange = (type) => {
+    setSelectedType(type);
+  };
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -151,9 +156,78 @@ export default function Page() {
     <Container>
       <div className="py-12 px-4">
         <h1 className="text-3xl font-semibold text-center text-gray-800">
-          USFRANC Private Sale Order Form
+          USFRANC Private Sale & Investors Order Form
         </h1>
         <form onSubmit={handleSubmit} className="space-y-8 p-6 shadow rounded">
+          {/* choose buyer type  */}
+          <div className="">
+            <h2 className="text-xl font-semibold text-gray-700 mb-4">Choose buying type</h2>
+
+            <div className="flex items-center gap-4 mb-6">
+              <div className="flex gap-2 items-center">
+                <input
+                  type="radio"
+                  id="private"
+                  name="buyingType"
+                  value="private"
+                  checked={selectedType === "private"}
+                  onChange={() => handleTypeChange("private")}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="private" className="cursor-pointer">Private</label>
+              </div>
+
+              <div className="flex gap-2 items-center">
+                <input
+                  type="radio"
+                  id="investor"
+                  name="buyingType"
+                  value="investor"
+                  checked={selectedType === "investor"}
+                  onChange={() => handleTypeChange("investor")}
+                  className="w-4 h-4"
+                />
+                <label htmlFor="investor" className="cursor-pointer">Investor</label>
+              </div>
+            </div>
+
+            {/* Information Tabs */}
+            {selectedType && (
+              <div className="mt-6 p-4 bg-gray-50 rounded-lg border">
+                {selectedType === "private" && (
+                  <div>
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-700 mb-2">Deferred Utility Distribution</h4>
+                      <div className="space-y-2 text-gray-600">
+                        <p>• 10% bonus after 12 months (Year 1)</p>
+                        <p>• 10% bonus after 24 months (Year 2)</p>
+                        <p className="font-medium text-gray-800">Total bonus: 20%</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {selectedType === "investor" && (
+                  <div>
+                    <div className="space-y-3 text-gray-600">
+                      <p>Participants may receive up to <span className="font-semibold text-gray-800">60% additional USFC coins</span> over a three-year period following the official launch of USFranc, subject to compliance and continued engagement.</p>
+
+                      <div>
+                        <h4 className="font-semibold text-gray-700 mb-2">Release Schedule:</h4>
+                        <div className="space-y-1">
+                          <p>• 20% after 12 months</p>
+                          <p>• 20% after 24 months</p>
+                          <p>• 20% after 36 months</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+          </div>
+
           {/* Buyer Information */}
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-gray-700">

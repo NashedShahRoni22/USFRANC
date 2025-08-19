@@ -63,6 +63,10 @@ export const MenuItems = [
       {
         title: "Terms & Condtions",
         path: "investors-terms-and-condtions"
+      },
+      {
+        title: "Invest in USFC now",
+        path: "pre-order"
       }
     ]
   },
