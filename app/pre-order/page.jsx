@@ -115,7 +115,7 @@ export default function Page() {
         submissionData.append("walletAddress", formData.walletAddress);
       }
 
-      const res = await fetch("https://api.usfranc.com/order/submit.php", {
+      const res = await fetch("https://usfranc.com/order/submit.php", {
         method: "POST",
         body: submissionData,
       });
@@ -199,8 +199,8 @@ export default function Page() {
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-700 mb-2">Deferred Utility Distribution</h4>
                       <div className="space-y-2 text-gray-600">
-                        <p>• 10% bonus after 12 months (Year 1)</p>
-                        <p>• 10% bonus after 24 months (Year 2)</p>
+                        <p>• 10% bonus in crypto after 12 months</p>
+                        <p>• 10% bonus in crypto after 24 months</p>
                         <p className="font-medium text-gray-800">Total bonus: 20%</p>
                       </div>
                     </div>
@@ -215,9 +215,10 @@ export default function Page() {
                       <div>
                         <h4 className="font-semibold text-gray-700 mb-2">Release Schedule:</h4>
                         <div className="space-y-1">
-                          <p>• 20% after 12 months</p>
-                          <p>• 20% after 24 months</p>
-                          <p>• 20% after 36 months</p>
+                          <p>• 20% bonus in crypto after 12 months</p>
+                          <p>• 20% bonus in crypto after 24 months</p>
+                          <p>• 20% bonus in crypto after 36 months</p>
+                          <p className="font-medium text-gray-800">Total bonus: 60%</p>
                         </div>
                       </div>
                     </div>
