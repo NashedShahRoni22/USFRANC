@@ -220,11 +220,6 @@ export default function WalletPage() {
               <FiShield className="min-w-fit text-2xl" /> SECURE CRYPTO VAULT
             </div>
 
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900">
-              <span style={{ color: "#7B5E00" }}>USFRANC</span> Wallet <br />
-              Coming Soon
-            </h2>
-
             <div className="space-y-4 text-gray-700">
               <p className="text-lg">
                 The <strong>native digital vault</strong> for the USFRANC
@@ -253,12 +248,6 @@ export default function WalletPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button
-                className="px-6 py-3 rounded-lg font-medium text-white transition-all duration-200 ease-in-out bg-[#7B5E00] hover:bg-[#674f01]"
-                disabled
-              >
-                Notify Me When Launched
-              </button>
               <Link
                 href="/Whitepaper"
                 className="px-6 py-3 rounded-lg font-medium transition-all duration-200 ease-in-out border broder-[#7B5E00] text-[#7B5E00] hover:bg-[#7B5E00] hover:text-white"
